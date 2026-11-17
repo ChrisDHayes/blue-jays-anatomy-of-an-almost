@@ -12,6 +12,8 @@ Open **How Toronto got outs in October** for the pitch-count heatmap and fieldin
 
 ## Build and check
 
+**Bunt or swing away?** now compares observed 2025 outcomes from 2,033 matching runner-and-out situations. Switch between scoring at least one run and two or more, or narrow the sample to teams trailing by one. Rates, sample sizes, approximate uncertainty intervals and the full inning-outcome counts update together. See the [method and limits](docs/METHODS.md#historical-bunt-comparison): this is historical evidence, not a forecast of Kiner-Falefa’s alternative Game 7 outcome.
+
 Use Python 3.10 or later. The build uses the standard library.
 
 ```bash

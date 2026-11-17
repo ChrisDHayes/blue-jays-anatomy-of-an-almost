@@ -113,28 +113,4 @@
   updatePin();
   markChapter();
 
-  const objectives = {
-    tie: {
-      heading: 'Extend the game or win it here',
-      text: 'Estimate the chance of scoring at least once before the third out. Exactly one run sends it to the 12th. Two or more win it immediately.',
-      evidence: 'Track how the runner can advance or score after each possible plate outcome, including failed bunt attempts.',
-    },
-    win: {
-      heading: 'Win from this position',
-      text: 'Estimate the chance of winning, counting both walk-offs in the 11th and wins after a tie.',
-      evidence: 'Use the same inning outcomes and estimate what happens after a tie, including bullpen options and the next innings.',
-    },
-  };
-  const objectiveButtons = [...document.querySelectorAll('[data-objective]')];
-
-  function setObjective(value) {
-    const objective = objectives[value];
-    for (const button of objectiveButtons) button.setAttribute('aria-pressed', String(button.dataset.objective === value));
-    document.getElementById('objective-heading').textContent = objective.heading;
-    document.getElementById('objective-text').textContent = objective.text;
-    document.getElementById('objective-evidence').textContent = objective.evidence;
-  }
-
-  for (const button of objectiveButtons) button.addEventListener('click', () => setObjective(button.dataset.objective));
-  setObjective('tie');
 })();

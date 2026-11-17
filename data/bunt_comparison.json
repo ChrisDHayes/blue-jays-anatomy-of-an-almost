@@ -1,0 +1,192 @@
+{
+  "edition": "2025-observed-1",
+  "source": "Retrosheet 2025 parsed plays, bundled snapshot",
+  "source_sha256": "ea7f4be3464825b332ed6f8c19e15310858458ea9eddf3e91a954e5b47f69d73",
+  "regular_games": 2430,
+  "scope": "2025 regular season; complete half-innings 1–8; first PA start with only a runner on second and no outs",
+  "bunt_definition": "A recorded bunt in play, sacrifice credit, or pitch code L, M or O anywhere in the next PA",
+  "no_bunt_definition": "No recorded bunt attempt in the next PA; includes hits, walks, strikeouts and other outcomes",
+  "interval_method": "95% Wilson binomial intervals; illustrative sampling uncertainty, without team/game clustering or causal adjustment",
+  "limits": [
+    "Players, pitchers, runners, lineups, inning and tactics differ across cohorts.",
+    "Bunt intent when no attempt was recorded is unknown; some attempts ended with a swing or walk.",
+    "These are observed rest-of-inning outcomes, not Game 7 forecasts or eventual win probabilities."
+  ],
+  "audit": {
+    "complete_half_innings": 38860,
+    "later_qualifying_starts_excluded": 101,
+    "incomplete_half_innings_excluded": 3
+  },
+  "samples": {
+    "all": {
+      "label": "All scorelines",
+      "n": 2033,
+      "cohorts": {
+        "bunt": {
+          "n": 157,
+          "games": 154,
+          "runs": {
+            "0": 60,
+            "1": 59,
+            "2": 38
+          },
+          "histogram": {
+            "0": 60,
+            "1": 59,
+            "2": 21,
+            "3": 12,
+            "4": 4,
+            "8": 1
+          },
+          "mean_runs": 1.0254777070063694,
+          "sacrifices_credited": 58,
+          "bunts_in_play": 89,
+          "metrics": {
+            "one": {
+              "count": 97,
+              "rate": 0.6178343949044586,
+              "interval95": [
+                0.5398723951948854,
+                0.6901677963781565
+              ]
+            },
+            "two": {
+              "count": 38,
+              "rate": 0.24203821656050956,
+              "interval95": [
+                0.1817197410773691,
+                0.3146787584519177
+              ]
+            }
+          }
+        },
+        "no_bunt": {
+          "n": 1876,
+          "games": 1340,
+          "runs": {
+            "0": 724,
+            "1": 621,
+            "2": 531
+          },
+          "histogram": {
+            "0": 724,
+            "1": 621,
+            "2": 275,
+            "3": 136,
+            "4": 59,
+            "5": 30,
+            "6": 17,
+            "7": 9,
+            "9": 4,
+            "10": 1
+          },
+          "mean_runs": 1.159914712153518,
+          "sacrifices_credited": 0,
+          "bunts_in_play": 0,
+          "metrics": {
+            "one": {
+              "count": 1152,
+              "rate": 0.6140724946695096,
+              "interval95": [
+                0.5918316937327891,
+                0.635847080980746
+              ]
+            },
+            "two": {
+              "count": 531,
+              "rate": 0.2830490405117271,
+              "interval95": [
+                0.26312355666862197,
+                0.3038612035724585
+              ]
+            }
+          }
+        }
+      }
+    },
+    "down_one": {
+      "label": "Trailing by one",
+      "n": 260,
+      "cohorts": {
+        "bunt": {
+          "n": 32,
+          "games": 32,
+          "runs": {
+            "0": 11,
+            "1": 15,
+            "2": 6
+          },
+          "histogram": {
+            "0": 11,
+            "1": 15,
+            "2": 4,
+            "3": 1,
+            "4": 1
+          },
+          "mean_runs": 0.9375,
+          "sacrifices_credited": 9,
+          "bunts_in_play": 18,
+          "metrics": {
+            "one": {
+              "count": 21,
+              "rate": 0.65625,
+              "interval95": [
+                0.4831108797896222,
+                0.7958956207556682
+              ]
+            },
+            "two": {
+              "count": 6,
+              "rate": 0.1875,
+              "interval95": [
+                0.08889544689565954,
+                0.3530915520137596
+              ]
+            }
+          }
+        },
+        "no_bunt": {
+          "n": 228,
+          "games": 222,
+          "runs": {
+            "0": 97,
+            "1": 74,
+            "2": 57
+          },
+          "histogram": {
+            "0": 97,
+            "1": 74,
+            "2": 35,
+            "3": 13,
+            "4": 4,
+            "5": 1,
+            "6": 2,
+            "7": 1,
+            "10": 1
+          },
+          "mean_runs": 1.0219298245614035,
+          "sacrifices_credited": 0,
+          "bunts_in_play": 0,
+          "metrics": {
+            "one": {
+              "count": 131,
+              "rate": 0.5745614035087719,
+              "interval95": [
+                0.5096726560308077,
+                0.6369792852265822
+              ]
+            },
+            "two": {
+              "count": 57,
+              "rate": 0.25,
+              "interval95": [
+                0.19825039106453413,
+                0.31003427648421755
+              ]
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -8,7 +8,8 @@ The versioned CSV and JSON files support the numbers in the story. The results c
 | Did several hitters supply more power than expected? | February Guru forecasts matched to 2025 Toronto batting lines | Twenty-one matched hitters are plotted by default. Nine of 12 with at least 200 actual plate appearances finished above their forecast slugging percentage. |
 | Where did the wins show up? | The 162-game regular-season ledger | Toronto moved from 14–16 to 94–68, scored 798 and conceded 721, and won 27 of 47 one-run games. |
 | How often would a comparable streak appear with the record fixed? | 150,000 permutations of the observed wins and losses | At least ten consecutive wins appeared in 22.524% of orderings. At least 23 wins in a 30-game window appeared in 35.6593%. |
-| What happened on the Game 7 bunt? | The recorded Game 7 play state and a league-average run expectancy table | Guerrero advanced from second to third, Toronto used one out and the score stayed 5–4. The change in expected runs for that outcome was −0.222. A strategy comparison would require additional modelling. |
+| What happened on the Game 7 bunt? | The recorded Game 7 play state and a league-average run expectancy table | Guerrero advanced from second to third, Toronto used one out and the score stayed 5–4. The change in expected runs for that outcome was −0.222. |
+| What followed comparable bunt attempts and other plate appearances? | First matching PA starts in completed 2025 regular-season half-innings, innings 1–8 | The interactive comparison shows observed one-run and two-run thresholds, counts and sampling intervals. It does not estimate an individualized Game 7 outcome or a causal strategy effect. |
 
 ## Forecast and player comparison
 
@@ -42,7 +43,40 @@ Run expectancy averages the runs remaining in a half-inning for each of the 24 c
 
 The optional Game 7 probability trace uses a histogram gradient-boosted tree classifier of eventual home-team victory. The fit used 189,939 regular-season pre-play states from 2,430 games, with features from inning, half, score, outs and runners. Five-fold validation held out whole games. The archived out-of-fold Brier score is 0.1562 against a 0.2492 constant baseline, with ROC AUC 0.8500. The full feature list, parameters and checks are in [the model audit](../methods/wpa_model_audit.json). The trace applies that model to a postseason game with different extra-inning runner rules. Postseason calibration is pending.
 
-For Kiner-Falefa’s observed sacrifice, subtract the expectancy with a runner on second and zero outs (1.10516) from the expectancy with a runner on third and one out (0.88279). No run scored on the play. The rounded change is −0.222 expected runs. A fair bunt-versus-swing comparison would model all plausible outcomes for both decisions from the same game state and retain batter, pitcher, runner and follow-on hitters. The story lets readers change the proposed objective between scoring at least one run that inning and eventually winning. The two questions can differ because one run extends the game and two end it.
+For Kiner-Falefa’s observed sacrifice, subtract the expectancy with a runner on second and zero outs (1.10516) from the expectancy with a runner on third and one out (0.88279). No run scored on the play. The rounded change is −0.222 expected runs. This describes the realized play. The historical comparison below uses a separate sample and denominator.
+
+## Historical bunt comparison
+
+**Question.** In other 2025 plate appearances beginning with only a runner on second and no outs, how often did at least one run, or two or more runs, score before the third out? The site’s “Try swinging away” controls now calculate and display these observed comparisons. Two runs would have won Game 7 in the 11th; one would have tied it. Eventual victory after a tie is not estimated.
+
+**Selection.** Use the bundled, checksum-locked Retrosheet archive, covering all 2,430 regular-season games. Keep innings 1–8, both halves, and require a completed half-inning (three outs). This avoids automatic runners and ordinary walk-off censoring. Three incomplete half-innings are excluded; 38,860 completed half-innings remain available for selection. Group runner-only events and the terminal plate-appearance row together. Match the state at the beginning of the PA, rather than its final pitch: a runner who steals second during a PA does not qualify a PA that began with a runner on first. Preserve subsequent runner movements and runs within a qualifying PA.
+
+Keep only the first qualifying start in each half-inning so outcomes do not overlap within that inning. Exclude 101 later qualifying starts. The resulting 2,033 opportunities all have a runner on second, first and third empty, and zero outs. The optional “Trailing by one” filter also requires the batting team’s score margin to equal −1 at that start; it leaves 260 cases. The filter does not match the inning, batter, pitcher or runner.
+
+**Classification.** A PA belongs to the bunt-attempt group if any of its rows has the `bunt` flag, a sacrifice credit, or pitch code `L` (foul bunt), `M` (missed bunt) or `O` (bunt foul tip). A failed attempt followed by a swing or walk stays in that group. A completed sacrifice alone would select on the play’s success, so the analysis includes all recorded attempts. The comparison group has no recorded bunt attempt; it includes walks, strikeouts, hits and other outcomes. Intent that produced no recorded attempt is unknown. No selected PA has an unexplained missing pitch sequence or unknown pitch code. See [Retrosheet’s pitch codes](https://www.retrosheet.org/eventfile.htm) and [parsed fields](https://www.retrosheet.org/downloads/plays.html).
+
+**Outcomes.** Sum every run from the start of the selected PA through the third out, including runs on runner-only events. Group these outcomes into zero, exactly one and two or more. The “Score at least one” rate includes the two-or-more bin. Counts of successful objectives are divided by all cases in that cohort.
+
+| Sample | Recorded next-PA approach | Cases | 0 runs | 1 run | 2+ runs | At least one | Two or more |
+| --- | --- | ---: | ---: | ---: | ---: | ---: | ---: |
+| All scorelines | Bunt attempted | 157 | 60 | 59 | 38 | 61.8% | 24.2% |
+| All scorelines | No bunt recorded | 1,876 | 724 | 621 | 531 | 61.4% | 28.3% |
+| Trailing by one | Bunt attempted | 32 | 11 | 15 | 6 | 65.6% | 18.8% |
+| Trailing by one | No bunt recorded | 228 | 97 | 74 | 57 | 57.5% | 25.0% |
+
+Of the 157 bunt-attempt PAs, 89 contained a recorded bunt in play and 58 received sacrifice credit. The broader definition retains misses, fouls and later changes of approach. All-scoreline mean runs remaining are 1.02548 for bunt attempts and 1.15991 for the comparison group. These are cohort averages, not the original RE24 state estimates.
+
+**Uncertainty and interpretation.** Bars use a common 0–100% scale. Lines show approximate 95% Wilson binomial intervals with z = 1.959963984540054. These intervals do not adjust for game or team clustering, lineup strength or selection into bunt attempts; they are exploratory descriptions of sampling uncertainty, not causal confidence intervals. The displayed ranges overlap for both objectives in both samples. That overlap is not a formal test. A small observed gap does not prove equivalence, and a larger gap does not establish that changing strategy would cause that change. A personalized Game 7 comparison would require additional modelling and validation, retaining the batter, pitcher, runner, subsequent hitters and postseason rules.
+
+**Reproduction and audit.** The [case ledger](../methods/bunt_comparison_cases.csv) records the game, inning, start and end play numbers, teams, players, score margin, recorded approach, pitch sequence, terminal event and remaining runs for every selected case. The [display extract](../data/bunt_comparison.json) contains exact counts, rates, intervals, scope and source checksum. The site build reconciles the displayed rates to the ledger. The pipeline uses only Python’s standard library.
+
+```bash
+python3 research/build_bunt_comparison.py
+python3 research/build_bunt_comparison.py --check
+python3 -m unittest discover -s research -p 'test_bunt_comparison.py'
+python3 scripts/build.py
+python3 scripts/build.py --check
+```
 
 ## Reproduce the Phase 9 analysis
 

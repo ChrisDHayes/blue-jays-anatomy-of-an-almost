@@ -332,7 +332,7 @@
       <details class="story-disclosure" id="bunt-explorer">
         <summary><span id="counterfactual-h">Bunt or swing away?</span></summary>
         <div class="story-disclosure-body">
-          <div class="counterfactual-intro"><p>Down 5–4 in the bottom of the 11th, Toronto had Guerrero on second and nobody out. Isiah Kiner-Falefa faced Yoshinobu Yamamoto. Start both choices from that same situation.</p></div>
+          <div class="counterfactual-intro"><p>Down 5–4 in the bottom of the 11th, Toronto had Guerrero on second and nobody out. Isiah Kiner-Falefa faced Yoshinobu Yamamoto. One run would keep Toronto alive; two would win it. What can the season’s other games tell us about that choice?</p></div>
           <div class="decision-paths">
             <div class="decision-path observed-path">
               <p class="eyebrow chapter-label">Observed play</p><h3>The sacrifice bunt</h3><p>Guerrero advanced to third. Toronto spent its first out, and the score stayed 5–4.</p>
@@ -342,14 +342,27 @@
               <a class="text-link decision-return" href="#game7-replay" data-show-bunt>See the recorded game state <span aria-hidden="true">↑</span></a>
             </div>
             <div class="decision-path scenario-path">
-              <p class="eyebrow chapter-label">Proposed comparison</p><h3>Try swinging away</h3><p>Pick the outcome a model would need to evaluate for both choices.</p>
-              <div class="objective-controls" role="group" aria-label="Choose what success means"><button type="button" data-objective="tie" aria-pressed="true">Score at least one</button><button type="button" data-objective="win" aria-pressed="false">Win the game</button></div>
-              <div class="objective-result" aria-live="polite" aria-atomic="true"><h4 id="objective-heading">Extend the game or win it here</h4><p id="objective-text">Estimate the chance of scoring at least once before the third out. Exactly one run sends it to the 12th. Two or more win it immediately.</p></div>
-              <p id="objective-evidence" class="decision-note">Model how the runner can advance or score after each possible plate outcome, including failed bunt attempts.</p>
-              <span class="estimate-status">Comparison pending calibration</span>
+              <p class="eyebrow chapter-label">Explore the 2025 evidence</p><h3>Try swinging away</h3><p>Compare what followed a bunt attempt with plate appearances that had no recorded bunt. Every case starts with <strong>only a runner on second and no outs.</strong></p>
+              <label class="bunt-sample-label" for="bunt-sample">Compare situations <select id="bunt-sample"><option value="all">All scorelines</option><option value="down_one">Trailing by one</option></select></label>
+              <p id="bunt-sample-note" class="decision-note"></p>
+              <div class="objective-controls" role="group" aria-label="Choose a rest-of-inning outcome"><button type="button" data-objective="one" aria-controls="bunt-results" aria-pressed="true">Score at least one</button><button type="button" data-objective="two" aria-controls="bunt-results" aria-pressed="false">Score two or more</button></div>
+              <div id="bunt-results" class="objective-result" aria-live="polite">
+                <h4 id="objective-heading"></h4><p id="objective-text"></p>
+                <div class="bunt-comparison-chart" id="bunt-comparison-chart" role="group" aria-label="Historical scoring rates">
+                  <div class="bunt-chart-axis" aria-hidden="true"><span>0%</span><span>50%</span><span>100%</span></div>
+                  <div class="bunt-rate-row" data-bunt-cohort="bunt"><div class="bunt-rate-label"><span>Bunt attempted</span><strong></strong></div><div class="bunt-bar-track" aria-hidden="true"><span class="bunt-bar-fill"></span><span class="bunt-bar-interval"></span><span class="bunt-bar-dot"></span></div><p class="bunt-rate-detail"></p></div>
+                  <div class="bunt-rate-row no-bunt-row" data-bunt-cohort="no_bunt"><div class="bunt-rate-label"><span>No bunt recorded</span><strong></strong></div><div class="bunt-bar-track" aria-hidden="true"><span class="bunt-bar-fill"></span><span class="bunt-bar-interval"></span><span class="bunt-bar-dot"></span></div><p class="bunt-rate-detail"></p></div>
+                </div>
+                <p id="bunt-takeaway" class="bunt-takeaway"></p>
+                <p id="objective-evidence" class="decision-note"></p>
+              </div>
+              <p class="bunt-limit"><strong>Historical outcomes, not a Game 7 forecast.</strong> Different hitters, pitchers and tactical situations shaped these samples. “No bunt recorded” includes walks, strikeouts and hits; bunt attempts include misses, fouls and later changes of approach.</p>
+              <details class="bunt-outcome-detail"><summary>See all inning outcomes</summary><table class="bunt-outcome-table"><caption>Runs scored from the selected start through the third out</caption><thead><tr><th scope="col">Next plate appearance</th><th scope="col">0 runs</th><th scope="col">1 run</th><th scope="col">2+ runs</th></tr></thead><tbody id="bunt-outcomes"></tbody></table><p class="decision-note" id="bunt-mean-runs"></p></details>
+              <a class="text-link decision-return" href="#method-model">Source and comparison method <span aria-hidden="true">↓</span></a>
+              <noscript><p>Enable JavaScript to explore the bundled 2025 comparison.</p></noscript>
             </div>
           </div>
-          <details class="decision-method"><summary>What would make this a fair comparison?</summary><p>Use the same score, inning, batter, pitcher and runner for each strategy. Estimate the range of outcomes from both decisions, including bunt misses, foul strikes and outs. Continue through the next hitters and, for eventual victory, through extra innings. Validate the estimates on comparable game states before interpreting any difference.</p></details>
+          <details class="decision-method"><summary>How close is this to the Game 7 decision?</summary><p>The comparison matches the runners and outs at the start of a plate appearance. “Trailing by one” also matches the score margin. It uses the first such opportunity in each completed half-inning of the 2025 regular season, innings 1–8, then counts every run through the third out. Restricting the innings avoids automatic runners and ordinary walk-off endings.</p><p>The lines show approximate 95% sampling intervals; smaller samples produce wider ranges. They do not account for differences between players, teams or tactics. A Game 7 strategy estimate would also need to retain Kiner-Falefa, Yamamoto, Guerrero, the next hitters and the postseason rules. These historical groups cannot establish which decision would have won the game.</p></details>
           <a class="chapter-next decision-next" href="#epilogue">What the season tells us <span aria-hidden="true">↓</span></a>
         </div>
       </details>
@@ -407,7 +420,8 @@
         <h3>Run expectancy, win probability and the bunt</h3>
         <p><strong>Run expectancy.</strong> Phase 9 estimated runs remaining for 24 runner-and-out states using completed half-innings from all 2,430 MLB regular-season games in the 2025 Retrosheet archive. A play’s RE24 equals runs scored plus expected runs after the play minus expected runs before it. After-expectancy is zero when the half-inning or game ends. Batting RE24 sums the plate-appearance values. Dividing by actual plate appearances and multiplying by 100 gives the displayed rate.</p>
         <p><strong>Experimental win probability.</strong> Phase 9 fitted a histogram gradient-boosted tree model to 189,939 pre-play states from those regular-season games. The inputs describe the inning, score, outs and runners. Regular-season checks held out entire games in five folds. The Game 7 trace applies that regular-season model to a postseason game, where extra-inning runner rules differ. Postseason calibration is pending.</p>
-        <p><strong>The sacrifice.</strong> The −0.222 figure is the change in expected runs for the recorded bunt, from a runner on second and no outs to a runner on third and one out. Comparing the bunt with swinging away would require outcome distributions for both choices from that start state, followed through the rest of the inning or game. The alternative remains a proposed analysis.</p>
+        <p><strong>The sacrifice and the comparison.</strong> The −0.222 figure measures the recorded bunt’s change in expected runs. The interactive comparison separately uses the first plate appearance starting with only a runner on second and no outs in each completed half-inning of the 2025 regular season, innings 1–8. A recorded bunt, sacrifice credit or pitch code L, M or O places the entire plate appearance in the bunt-attempt group, including attempts that ended in a swing or walk. The other group has no recorded bunt attempt. Runs include all plays from that start through the third out. These are observed associations, not individualized forecasts or causal effects.</p>
+        <p><strong>Sample and uncertainty.</strong> There are 2,033 opportunities: 157 with a bunt attempt and 1,876 without one. Filtering to a batting team trailing by one leaves 32 and 228. Three incomplete half-innings are excluded, and 101 later qualifying starts are omitted to avoid overlapping outcomes within an inning. The displayed 95% Wilson binomial intervals describe approximate sampling uncertainty; they do not adjust for team or game clustering, player differences or strategy selection. Scoring two or more concerns that inning; eventual victory after a tie is not estimated.</p>
         <p class="method-links"><a href="https://www.retrosheet.org/downloads/plays.html" target="_blank" rel="noopener noreferrer">Retrosheet play archive</a><a href="https://library.fangraphs.com/misc/re24/" target="_blank" rel="noopener noreferrer">FanGraphs RE24 definition</a><a href="https://www.mlb.com/glossary/rules/designated-runner" target="_blank" rel="noopener noreferrer">MLB extra-inning runner rule</a><a href="#method-files">Model audit and run expectancy files</a></p>
       </li>
       <li id="method-outs" tabindex="-1">
@@ -438,7 +452,9 @@
     </section>
     <section id="method-files" class="methods-files" aria-labelledby="files-title" tabindex="-1">
       <h3 id="files-title">Data and reproduction</h3>
-      <p>The GitHub package includes the 162-game and 18-game ledgers, hitter and replay extracts, the original Retrosheet play archive, and the scripts and audits for the shuffle and Phase 9 analysis. Run the shuffle from the extracted package with Python and NumPy.</p>
+      <p>The GitHub package includes the 162-game and 18-game ledgers, hitter and replay extracts, the original Retrosheet play archive, and the scripts and audits for the shuffle, Phase 9 analysis and bunt comparison. The bunt analysis includes a case-by-case CSV and can be reproduced with Python’s standard library.</p>
+      <p class="method-links"><a href="https://github.com/ChrisDHayes/blue-jays-anatomy-of-an-almost/blob/main/methods/bunt_comparison_cases.csv" target="_blank" rel="noopener noreferrer">Inspect the 2,033 comparison cases</a><a href="https://github.com/ChrisDHayes/blue-jays-anatomy-of-an-almost/blob/main/research/build_bunt_comparison.py" target="_blank" rel="noopener noreferrer">Reproduce the bunt comparison</a></p>
+      <pre><code>python3 research/build_bunt_comparison.py --check</code></pre>
       <pre><code>python3 season_streak_diagnostics.py --ledger data/tor_2025_regular_162.csv --out season_streak_rerun.json</code></pre>
     </section>
     <p class="art-credit">The illustrations are adapted from the D13-07 concept studies. First-person passages draw on Christopher Hayes’s recollections.</p>

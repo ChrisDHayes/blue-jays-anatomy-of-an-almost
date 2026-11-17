@@ -627,6 +627,40 @@ body:has(.profile-dialog[open]) { overflow: hidden; }
   .methods-glossary dl { grid-template-columns: minmax(0, 1fr); }
 }
 
+.bunt-sample-label { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 14px; font: 700 .82rem/1.4 var(--ui); }
+.bunt-sample-label select { min-height: 44px; max-width: 100%; padding: 8px 30px 8px 10px; border: 1px solid #9c978d; border-radius: 5px; background: #fffdf8; color: #18364d; font: inherit; }
+.bunt-comparison-chart { margin: 20px 0 18px; }
+.bunt-chart-axis { display: flex; justify-content: space-between; color: #526372; font: 600 .7rem/1.3 var(--ui); margin-bottom: 15px; }
+.bunt-rate-row { --bunt-mark: #946225; margin: 0 0 22px; }
+.no-bunt-row { --bunt-mark: #185e8b; }
+.bunt-rate-label { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; font: 600 .88rem/1.3 var(--ui); }
+.bunt-rate-label strong { font: 600 1.4rem/1.2 var(--ui); color: var(--bunt-mark); }
+.bunt-bar-track { position: relative; height: 25px; margin: 9px 0 7px; background: #e3dfd6; border-radius: 2px; }
+.bunt-bar-fill { position: absolute; inset: 0 auto 0 0; background: var(--bunt-mark); opacity: .23; border-radius: 2px; }
+.bunt-bar-interval { position: absolute; top: 11px; height: 3px; background: var(--bunt-mark); }
+.bunt-bar-interval::before, .bunt-bar-interval::after { content: ''; position: absolute; height: 13px; width: 2px; top: -5px; background: var(--bunt-mark); }
+.bunt-bar-interval::before { left: 0; }
+.bunt-bar-interval::after { right: 0; }
+.bunt-bar-dot { position: absolute; top: 6px; width: 13px; height: 13px; border: 2px solid #fffdf8; border-radius: 50%; background: var(--bunt-mark); transform: translateX(-50%); box-sizing: border-box; }
+.bunt-rate-detail { margin: 0; font: 400 .76rem/1.5 var(--ui); color: #405466; }
+.bunt-takeaway { padding: 13px 15px; border-left: 3px solid #185e8b; background: #e7eceb; font: 600 .85rem/1.5 var(--ui); }
+.bunt-limit { margin: 18px 0 14px; font: 400 .83rem/1.55 var(--ui); color: #34495a; }
+.bunt-limit strong { display: block; margin-bottom: 5px; }
+.bunt-outcome-detail { border-top: 1px solid #c8c0b1; padding-top: 5px; }
+.bunt-outcome-detail summary { cursor: pointer; padding: 12px 0; min-height: 44px; box-sizing: border-box; font: 700 .83rem/1.4 var(--ui); }
+.bunt-outcome-table { border-collapse: collapse; width: 100%; margin-top: 8px; font: 400 .76rem/1.4 var(--ui); }
+.bunt-outcome-table caption { text-align: left; margin-bottom: 10px; font-weight: 600; color: #405466; }
+.bunt-outcome-table th, .bunt-outcome-table td { border-bottom: 1px solid #d4ccbc; padding: 9px 4px; text-align: right; }
+.bunt-outcome-table th:first-child { text-align: left; width: 34%; }
+.bunt-outcome-table td span { display: block; font-size: .68rem; color: #526372; margin-top: 2px; }
+.bunt-outcome-table td strong { font-weight: 600; }
+.bunt-sample-label select:focus-visible, .bunt-outcome-detail summary:focus-visible, .objective-controls button:focus-visible { outline: 3px solid #185e8b; outline-offset: 3px; }
+@media (max-width: 374px) {
+  .bunt-rate-label { font-size: .8rem; }
+  .bunt-outcome-table { font-size: .68rem; }
+  .bunt-outcome-table td span { font-size: .63rem; }
+}
+
 </style>
 </head>
 <body>
@@ -964,7 +998,7 @@ body:has(.profile-dialog[open]) { overflow: hidden; }
       <details class="story-disclosure" id="bunt-explorer">
         <summary><span id="counterfactual-h">Bunt or swing away?</span></summary>
         <div class="story-disclosure-body">
-          <div class="counterfactual-intro"><p>Down 5–4 in the bottom of the 11th, Toronto had Guerrero on second and nobody out. Isiah Kiner-Falefa faced Yoshinobu Yamamoto. Start both choices from that same situation.</p></div>
+          <div class="counterfactual-intro"><p>Down 5–4 in the bottom of the 11th, Toronto had Guerrero on second and nobody out. Isiah Kiner-Falefa faced Yoshinobu Yamamoto. One run would keep Toronto alive; two would win it. What can the season’s other games tell us about that choice?</p></div>
           <div class="decision-paths">
             <div class="decision-path observed-path">
               <p class="eyebrow chapter-label">Observed play</p><h3>The sacrifice bunt</h3><p>Guerrero advanced to third. Toronto spent its first out, and the score stayed 5–4.</p>
@@ -974,14 +1008,27 @@ body:has(.profile-dialog[open]) { overflow: hidden; }
               <a class="text-link decision-return" href="#game7-replay" data-show-bunt>See the recorded game state <span aria-hidden="true">↑</span></a>
             </div>
             <div class="decision-path scenario-path">
-              <p class="eyebrow chapter-label">Proposed comparison</p><h3>Try swinging away</h3><p>Pick the outcome a model would need to evaluate for both choices.</p>
-              <div class="objective-controls" role="group" aria-label="Choose what success means"><button type="button" data-objective="tie" aria-pressed="true">Score at least one</button><button type="button" data-objective="win" aria-pressed="false">Win the game</button></div>
-              <div class="objective-result" aria-live="polite" aria-atomic="true"><h4 id="objective-heading">Extend the game or win it here</h4><p id="objective-text">Estimate the chance of scoring at least once before the third out. Exactly one run sends it to the 12th. Two or more win it immediately.</p></div>
-              <p id="objective-evidence" class="decision-note">Model how the runner can advance or score after each possible plate outcome, including failed bunt attempts.</p>
-              <span class="estimate-status">Comparison pending calibration</span>
+              <p class="eyebrow chapter-label">Explore the 2025 evidence</p><h3>Try swinging away</h3><p>Compare what followed a bunt attempt with plate appearances that had no recorded bunt. Every case starts with <strong>only a runner on second and no outs.</strong></p>
+              <label class="bunt-sample-label" for="bunt-sample">Compare situations <select id="bunt-sample"><option value="all">All scorelines</option><option value="down_one">Trailing by one</option></select></label>
+              <p id="bunt-sample-note" class="decision-note"></p>
+              <div class="objective-controls" role="group" aria-label="Choose a rest-of-inning outcome"><button type="button" data-objective="one" aria-controls="bunt-results" aria-pressed="true">Score at least one</button><button type="button" data-objective="two" aria-controls="bunt-results" aria-pressed="false">Score two or more</button></div>
+              <div id="bunt-results" class="objective-result" aria-live="polite">
+                <h4 id="objective-heading"></h4><p id="objective-text"></p>
+                <div class="bunt-comparison-chart" id="bunt-comparison-chart" role="group" aria-label="Historical scoring rates">
+                  <div class="bunt-chart-axis" aria-hidden="true"><span>0%</span><span>50%</span><span>100%</span></div>
+                  <div class="bunt-rate-row" data-bunt-cohort="bunt"><div class="bunt-rate-label"><span>Bunt attempted</span><strong></strong></div><div class="bunt-bar-track" aria-hidden="true"><span class="bunt-bar-fill"></span><span class="bunt-bar-interval"></span><span class="bunt-bar-dot"></span></div><p class="bunt-rate-detail"></p></div>
+                  <div class="bunt-rate-row no-bunt-row" data-bunt-cohort="no_bunt"><div class="bunt-rate-label"><span>No bunt recorded</span><strong></strong></div><div class="bunt-bar-track" aria-hidden="true"><span class="bunt-bar-fill"></span><span class="bunt-bar-interval"></span><span class="bunt-bar-dot"></span></div><p class="bunt-rate-detail"></p></div>
+                </div>
+                <p id="bunt-takeaway" class="bunt-takeaway"></p>
+                <p id="objective-evidence" class="decision-note"></p>
+              </div>
+              <p class="bunt-limit"><strong>Historical outcomes, not a Game 7 forecast.</strong> Different hitters, pitchers and tactical situations shaped these samples. “No bunt recorded” includes walks, strikeouts and hits; bunt attempts include misses, fouls and later changes of approach.</p>
+              <details class="bunt-outcome-detail"><summary>See all inning outcomes</summary><table class="bunt-outcome-table"><caption>Runs scored from the selected start through the third out</caption><thead><tr><th scope="col">Next plate appearance</th><th scope="col">0 runs</th><th scope="col">1 run</th><th scope="col">2+ runs</th></tr></thead><tbody id="bunt-outcomes"></tbody></table><p class="decision-note" id="bunt-mean-runs"></p></details>
+              <a class="text-link decision-return" href="#method-model">Source and comparison method <span aria-hidden="true">↓</span></a>
+              <noscript><p>Enable JavaScript to explore the bundled 2025 comparison.</p></noscript>
             </div>
           </div>
-          <details class="decision-method"><summary>What would make this a fair comparison?</summary><p>Use the same score, inning, batter, pitcher and runner for each strategy. Estimate the range of outcomes from both decisions, including bunt misses, foul strikes and outs. Continue through the next hitters and, for eventual victory, through extra innings. Validate the estimates on comparable game states before interpreting any difference.</p></details>
+          <details class="decision-method"><summary>How close is this to the Game 7 decision?</summary><p>The comparison matches the runners and outs at the start of a plate appearance. “Trailing by one” also matches the score margin. It uses the first such opportunity in each completed half-inning of the 2025 regular season, innings 1–8, then counts every run through the third out. Restricting the innings avoids automatic runners and ordinary walk-off endings.</p><p>The lines show approximate 95% sampling intervals; smaller samples produce wider ranges. They do not account for differences between players, teams or tactics. A Game 7 strategy estimate would also need to retain Kiner-Falefa, Yamamoto, Guerrero, the next hitters and the postseason rules. These historical groups cannot establish which decision would have won the game.</p></details>
           <a class="chapter-next decision-next" href="#epilogue">What the season tells us <span aria-hidden="true">↓</span></a>
         </div>
       </details>
@@ -1039,7 +1086,8 @@ body:has(.profile-dialog[open]) { overflow: hidden; }
         <h3>Run expectancy, win probability and the bunt</h3>
         <p><strong>Run expectancy.</strong> Phase 9 estimated runs remaining for 24 runner-and-out states using completed half-innings from all 2,430 MLB regular-season games in the 2025 Retrosheet archive. A play’s RE24 equals runs scored plus expected runs after the play minus expected runs before it. After-expectancy is zero when the half-inning or game ends. Batting RE24 sums the plate-appearance values. Dividing by actual plate appearances and multiplying by 100 gives the displayed rate.</p>
         <p><strong>Experimental win probability.</strong> Phase 9 fitted a histogram gradient-boosted tree model to 189,939 pre-play states from those regular-season games. The inputs describe the inning, score, outs and runners. Regular-season checks held out entire games in five folds. The Game 7 trace applies that regular-season model to a postseason game, where extra-inning runner rules differ. Postseason calibration is pending.</p>
-        <p><strong>The sacrifice.</strong> The −0.222 figure is the change in expected runs for the recorded bunt, from a runner on second and no outs to a runner on third and one out. Comparing the bunt with swinging away would require outcome distributions for both choices from that start state, followed through the rest of the inning or game. The alternative remains a proposed analysis.</p>
+        <p><strong>The sacrifice and the comparison.</strong> The −0.222 figure measures the recorded bunt’s change in expected runs. The interactive comparison separately uses the first plate appearance starting with only a runner on second and no outs in each completed half-inning of the 2025 regular season, innings 1–8. A recorded bunt, sacrifice credit or pitch code L, M or O places the entire plate appearance in the bunt-attempt group, including attempts that ended in a swing or walk. The other group has no recorded bunt attempt. Runs include all plays from that start through the third out. These are observed associations, not individualized forecasts or causal effects.</p>
+        <p><strong>Sample and uncertainty.</strong> There are 2,033 opportunities: 157 with a bunt attempt and 1,876 without one. Filtering to a batting team trailing by one leaves 32 and 228. Three incomplete half-innings are excluded, and 101 later qualifying starts are omitted to avoid overlapping outcomes within an inning. The displayed 95% Wilson binomial intervals describe approximate sampling uncertainty; they do not adjust for team or game clustering, player differences or strategy selection. Scoring two or more concerns that inning; eventual victory after a tie is not estimated.</p>
         <p class="method-links"><a href="https://www.retrosheet.org/downloads/plays.html" target="_blank" rel="noopener noreferrer">Retrosheet play archive</a><a href="https://library.fangraphs.com/misc/re24/" target="_blank" rel="noopener noreferrer">FanGraphs RE24 definition</a><a href="https://www.mlb.com/glossary/rules/designated-runner" target="_blank" rel="noopener noreferrer">MLB extra-inning runner rule</a><a href="#method-files">Model audit and run expectancy files</a></p>
       </li>
       <li id="method-outs" tabindex="-1">
@@ -1070,7 +1118,9 @@ body:has(.profile-dialog[open]) { overflow: hidden; }
     </section>
     <section id="method-files" class="methods-files" aria-labelledby="files-title" tabindex="-1">
       <h3 id="files-title">Data and reproduction</h3>
-      <p>The GitHub package includes the 162-game and 18-game ledgers, hitter and replay extracts, the original Retrosheet play archive, and the scripts and audits for the shuffle and Phase 9 analysis. Run the shuffle from the extracted package with Python and NumPy.</p>
+      <p>The GitHub package includes the 162-game and 18-game ledgers, hitter and replay extracts, the original Retrosheet play archive, and the scripts and audits for the shuffle, Phase 9 analysis and bunt comparison. The bunt analysis includes a case-by-case CSV and can be reproduced with Python’s standard library.</p>
+      <p class="method-links"><a href="https://github.com/ChrisDHayes/blue-jays-anatomy-of-an-almost/blob/main/methods/bunt_comparison_cases.csv" target="_blank" rel="noopener noreferrer">Inspect the 2,033 comparison cases</a><a href="https://github.com/ChrisDHayes/blue-jays-anatomy-of-an-almost/blob/main/research/build_bunt_comparison.py" target="_blank" rel="noopener noreferrer">Reproduce the bunt comparison</a></p>
+      <pre><code>python3 research/build_bunt_comparison.py --check</code></pre>
       <pre><code>python3 season_streak_diagnostics.py --ledger data/tor_2025_regular_162.csv --out season_streak_rerun.json</code></pre>
     </section>
     <p class="art-credit">The illustrations are adapted from the D13-07 concept studies. First-person passages draw on Christopher Hayes’s recollections.</p>
@@ -1084,6 +1134,7 @@ body:has(.profile-dialog[open]) { overflow: hidden; }
 <script id="diagnostic-json" type="application/json">{"status":"PASS","games":162,"wins":94,"losses":68,"seed":20261114,"permutations":150000,"max_30_game_wins_observed":23,"max_30_game_first_start":"2025-06-21","max_30_game_first_end":"2025-07-26","p_conditional_max30_at_least_observed":0.3565933333333333,"longest_win_streak_observed":10,"p_conditional_longest_streak_at_least_observed":0.22524,"null":"Random permutation of 94 W and 68 L, preserving season total","limitations":"Not a probability that team was lucky; no opponent, schedule, venue, injuries or player ability adjustment","histogram_max30":{"18":1,"19":417,"20":10934,"21":37822,"22":47337,"23":31949,"24":14972,"25":5029,"26":1295,"27":220,"28":24},"histogram_max_streak":{"4":167,"5":5162,"6":22129,"7":34113,"8":31600,"9":23043,"10":14288,"11":8526,"12":4901,"13":2700,"14":1536,"15":866,"16":451,"17":252,"18":113,"19":82,"20":38,"21":15,"22":8,"23":4,"24":2,"25":4}}</script>
 <script id="bat-flip-json" type="application/json">{"date":"2015-10-14","game":"ALDS Game 5","venue":"Rogers Centre","innings":{"tor":[0,0,1,0,0,1,4,0,null],"tex":[1,0,1,0,0,0,1,0,0]},"seventh":[{"id":"odor","half":"Top of the seventh","title":"Texas takes the lead","description":"Russell Martin’s throw back to the pitcher deflects off Shin-Soo Choo’s hand. The umpires allow Rougned Odor’s run from third.","tor":0,"tex":1},{"id":"donaldson","half":"Bottom of the seventh","title":"Donaldson brings Toronto level","description":"Three consecutive Texas errors help load the bases. Kevin Pillar scores from third when Donaldson’s fly drops in and Texas gets a force at second.","tor":1,"tex":0},{"id":"bautista","half":"Bottom of the seventh","title":"Bautista’s three-run homer","description":"With two outs and two men on, José Bautista takes Sam Dyson deep. Toronto goes ahead for good, 6–3.","tor":3,"tex":0}],"sources":{"line_score":"https://www.baseball-almanac.com/box-scores/boxscore.php?boxid=201510140TOR","seventh_inning":"https://www.mlb.com/news/blue-jays-ride-wild-seventh-past-rangers-c154473866","clip":"https://www.mlb.com/video/bautista-fuels-blue-jays-to-alcs"}}</script>
 <script id="postseason-outs-json" type="application/json">{"NYY":{"games":4,"toronto":{"pa":156,"strikeouts":37,"walks":15,"runs":19,"pitches":{"0-0":{"total":153,"miss":15,"called":44,"play":18},"0-1":{"total":79,"miss":13,"called":8,"play":15},"0-2":{"total":34,"miss":3,"called":1,"play":8},"1-0":{"total":56,"miss":10,"called":16,"play":4},"1-1":{"total":66,"miss":8,"called":6,"play":15},"1-2":{"total":57,"miss":12,"called":1,"play":12},"2-0":{"total":18,"miss":0,"called":6,"play":3},"2-1":{"total":30,"miss":4,"called":3,"play":4},"2-2":{"total":46,"miss":7,"called":2,"play":9},"3-0":{"total":8,"miss":0,"called":6,"play":0},"3-1":{"total":18,"miss":2,"called":3,"play":5},"3-2":{"total":32,"miss":7,"called":3,"play":9}},"fielding":{"all":{"1":{"balls":3,"out":3},"2":{"balls":2,"out":2},"3":{"balls":11,"out":10},"4":{"balls":8,"out":7},"5":{"balls":12,"out":11},"6":{"balls":8,"out":7},"7":{"balls":19,"out":10},"8":{"balls":18,"out":10},"9":{"balls":17,"out":6}},"ground":{"1":{"balls":2,"out":2},"2":{"balls":1,"out":1},"3":{"balls":10,"out":9},"4":{"balls":5,"out":4},"5":{"balls":6,"out":6},"6":{"balls":4,"out":3},"7":{"balls":1,"out":0},"8":{"balls":1,"out":0},"9":{"balls":5,"out":1}},"air":{"1":{"balls":1,"out":1},"2":{"balls":1,"out":1},"3":{"balls":1,"out":1},"4":{"balls":3,"out":3},"5":{"balls":6,"out":5},"6":{"balls":4,"out":4},"7":{"balls":18,"out":10},"8":{"balls":17,"out":10},"9":{"balls":12,"out":5}}}},"opponents":{"pa":161,"strikeouts":24,"walks":8,"runs":34,"pitches":{"0-0":{"total":160,"miss":14,"called":39,"play":21},"0-1":{"total":78,"miss":12,"called":1,"play":14},"0-2":{"total":43,"miss":1,"called":0,"play":13},"1-0":{"total":60,"miss":7,"called":12,"play":15},"1-1":{"total":63,"miss":5,"called":7,"play":12},"1-2":{"total":62,"miss":7,"called":1,"play":16},"2-0":{"total":14,"miss":0,"called":2,"play":2},"2-1":{"total":32,"miss":4,"called":3,"play":9},"2-2":{"total":46,"miss":7,"called":2,"play":14},"3-0":{"total":5,"miss":0,"called":3,"play":1},"3-1":{"total":8,"miss":0,"called":3,"play":2},"3-2":{"total":21,"miss":2,"called":1,"play":8}},"fielding":{"all":{"1":{"balls":2,"out":2},"2":{"balls":1,"out":1},"3":{"balls":8,"out":7},"4":{"balls":12,"out":10},"5":{"balls":14,"out":11},"6":{"balls":10,"out":10},"7":{"balls":27,"out":13},"8":{"balls":17,"out":11},"9":{"balls":27,"out":11}},"ground":{"1":{"balls":2,"out":2},"2":{"balls":0,"out":0},"3":{"balls":6,"out":5},"4":{"balls":9,"out":7},"5":{"balls":13,"out":10},"6":{"balls":7,"out":7},"7":{"balls":4,"out":0},"8":{"balls":3,"out":0},"9":{"balls":4,"out":0}},"air":{"1":{"balls":0,"out":0},"2":{"balls":1,"out":1},"3":{"balls":2,"out":2},"4":{"balls":3,"out":3},"5":{"balls":1,"out":1},"6":{"balls":3,"out":3},"7":{"balls":23,"out":13},"8":{"balls":14,"out":11},"9":{"balls":23,"out":11}}}},"dates":["2025-10-04","2025-10-05","2025-10-07","2025-10-08"]},"SEA":{"games":7,"toronto":{"pa":258,"strikeouts":71,"walks":29,"runs":30,"pitches":{"0-0":{"total":256,"miss":32,"called":66,"play":31},"0-1":{"total":129,"miss":20,"called":11,"play":21},"0-2":{"total":59,"miss":10,"called":3,"play":8},"1-0":{"total":96,"miss":9,"called":20,"play":8},"1-1":{"total":102,"miss":15,"called":8,"play":15},"1-2":{"total":86,"miss":17,"called":3,"play":13},"2-0":{"total":42,"miss":5,"called":9,"play":8},"2-1":{"total":67,"miss":8,"called":9,"play":15},"2-2":{"total":96,"miss":16,"called":8,"play":16},"3-0":{"total":12,"miss":0,"called":6,"play":0},"3-1":{"total":27,"miss":2,"called":6,"play":4},"3-2":{"total":57,"miss":8,"called":3,"play":17}},"fielding":{"all":{"1":{"balls":2,"out":2},"2":{"balls":2,"out":2},"3":{"balls":14,"out":13},"4":{"balls":22,"out":21},"5":{"balls":15,"out":13},"6":{"balls":15,"out":14},"7":{"balls":18,"out":10},"8":{"balls":30,"out":16},"9":{"balls":24,"out":16}},"ground":{"1":{"balls":2,"out":2},"2":{"balls":1,"out":1},"3":{"balls":10,"out":10},"4":{"balls":18,"out":17},"5":{"balls":10,"out":8},"6":{"balls":10,"out":9},"7":{"balls":3,"out":0},"8":{"balls":6,"out":0},"9":{"balls":2,"out":0}},"air":{"1":{"balls":0,"out":0},"2":{"balls":1,"out":1},"3":{"balls":4,"out":3},"4":{"balls":4,"out":4},"5":{"balls":5,"out":5},"6":{"balls":5,"out":5},"7":{"balls":15,"out":10},"8":{"balls":24,"out":16},"9":{"balls":22,"out":16}}}},"opponents":{"pa":270,"strikeouts":40,"walks":25,"runs":37,"pitches":{"0-0":{"total":267,"miss":17,"called":70,"play":41},"0-1":{"total":130,"miss":12,"called":8,"play":34},"0-2":{"total":55,"miss":8,"called":1,"play":16},"1-0":{"total":96,"miss":11,"called":21,"play":19},"1-1":{"total":91,"miss":15,"called":9,"play":25},"1-2":{"total":80,"miss":8,"called":2,"play":23},"2-0":{"total":34,"miss":2,"called":16,"play":5},"2-1":{"total":44,"miss":5,"called":2,"play":11},"2-2":{"total":78,"miss":13,"called":1,"play":19},"3-0":{"total":9,"miss":0,"called":5,"play":0},"3-1":{"total":20,"miss":4,"called":5,"play":2},"3-2":{"total":38,"miss":2,"called":1,"play":8}},"fielding":{"all":{"1":{"balls":12,"out":11},"2":{"balls":3,"out":3},"3":{"balls":17,"out":16},"4":{"balls":23,"out":23},"5":{"balls":16,"out":13},"6":{"balls":22,"out":20},"7":{"balls":29,"out":16},"8":{"balls":37,"out":19},"9":{"balls":33,"out":17}},"ground":{"1":{"balls":12,"out":11},"2":{"balls":2,"out":2},"3":{"balls":11,"out":10},"4":{"balls":16,"out":16},"5":{"balls":14,"out":11},"6":{"balls":18,"out":16},"7":{"balls":5,"out":0},"8":{"balls":4,"out":0},"9":{"balls":4,"out":0}},"air":{"1":{"balls":0,"out":0},"2":{"balls":1,"out":1},"3":{"balls":6,"out":6},"4":{"balls":7,"out":7},"5":{"balls":2,"out":2},"6":{"balls":4,"out":4},"7":{"balls":24,"out":16},"8":{"balls":33,"out":19},"9":{"balls":29,"out":17}}}},"dates":["2025-10-12","2025-10-13","2025-10-15","2025-10-16","2025-10-17","2025-10-19","2025-10-20"]},"LAD":{"games":7,"toronto":{"pa":300,"strikeouts":72,"walks":33,"runs":26,"pitches":{"0-0":{"total":293,"miss":17,"called":88,"play":30},"0-1":{"total":152,"miss":24,"called":15,"play":27},"0-2":{"total":69,"miss":10,"called":2,"play":9},"1-0":{"total":111,"miss":14,"called":34,"play":8},"1-1":{"total":132,"miss":25,"called":13,"play":28},"1-2":{"total":121,"miss":21,"called":2,"play":23},"2-0":{"total":36,"miss":4,"called":6,"play":8},"2-1":{"total":51,"miss":7,"called":6,"play":12},"2-2":{"total":109,"miss":16,"called":6,"play":26},"3-0":{"total":12,"miss":0,"called":7,"play":0},"3-1":{"total":23,"miss":1,"called":5,"play":2},"3-2":{"total":53,"miss":7,"called":3,"play":20}},"fielding":{"all":{"1":{"balls":3,"out":3},"2":{"balls":1,"out":1},"3":{"balls":15,"out":14},"4":{"balls":19,"out":19},"5":{"balls":20,"out":18},"6":{"balls":19,"out":18},"7":{"balls":27,"out":15},"8":{"balls":36,"out":23},"9":{"balls":42,"out":32}},"ground":{"1":{"balls":3,"out":3},"2":{"balls":0,"out":0},"3":{"balls":10,"out":9},"4":{"balls":12,"out":12},"5":{"balls":11,"out":9},"6":{"balls":16,"out":15},"7":{"balls":2,"out":0},"8":{"balls":8,"out":0},"9":{"balls":5,"out":1}},"air":{"1":{"balls":0,"out":0},"2":{"balls":1,"out":1},"3":{"balls":5,"out":5},"4":{"balls":7,"out":7},"5":{"balls":9,"out":9},"6":{"balls":3,"out":3},"7":{"balls":25,"out":15},"8":{"balls":28,"out":23},"9":{"balls":37,"out":31}}}},"opponents":{"pa":319,"strikeouts":64,"walks":28,"runs":34,"pitches":{"0-0":{"total":316,"miss":35,"called":80,"play":40},"0-1":{"total":153,"miss":14,"called":13,"play":33},"0-2":{"total":83,"miss":9,"called":2,"play":17},"1-0":{"total":120,"miss":13,"called":27,"play":22},"1-1":{"total":117,"miss":19,"called":13,"play":26},"1-2":{"total":109,"miss":17,"called":2,"play":22},"2-0":{"total":39,"miss":6,"called":10,"play":0},"2-1":{"total":64,"miss":7,"called":11,"play":8},"2-2":{"total":97,"miss":11,"called":4,"play":22},"3-0":{"total":16,"miss":0,"called":10,"play":3},"3-1":{"total":34,"miss":1,"called":10,"play":7},"3-2":{"total":72,"miss":7,"called":4,"play":20}},"fielding":{"all":{"1":{"balls":13,"out":12},"2":{"balls":0,"out":0},"3":{"balls":23,"out":21},"4":{"balls":24,"out":22},"5":{"balls":20,"out":15},"6":{"balls":26,"out":24},"7":{"balls":41,"out":16},"8":{"balls":36,"out":25},"9":{"balls":29,"out":10}},"ground":{"1":{"balls":10,"out":10},"2":{"balls":0,"out":0},"3":{"balls":14,"out":13},"4":{"balls":24,"out":22},"5":{"balls":15,"out":10},"6":{"balls":20,"out":18},"7":{"balls":5,"out":0},"8":{"balls":3,"out":0},"9":{"balls":5,"out":0}},"air":{"1":{"balls":3,"out":2},"2":{"balls":0,"out":0},"3":{"balls":9,"out":8},"4":{"balls":0,"out":0},"5":{"balls":5,"out":5},"6":{"balls":6,"out":6},"7":{"balls":36,"out":16},"8":{"balls":33,"out":25},"9":{"balls":24,"out":10}}}},"dates":["2025-10-24","2025-10-25","2025-10-27","2025-10-28","2025-10-29","2025-10-31","2025-11-01"]},"all":{"games":18,"toronto":{"pa":714,"strikeouts":180,"walks":77,"runs":75,"pitches":{"0-0":{"total":702,"miss":64,"called":198,"play":79},"0-1":{"total":360,"miss":57,"called":34,"play":63},"0-2":{"total":162,"miss":23,"called":6,"play":25},"1-0":{"total":263,"miss":33,"called":70,"play":20},"1-1":{"total":300,"miss":48,"called":27,"play":58},"1-2":{"total":264,"miss":50,"called":6,"play":48},"2-0":{"total":96,"miss":9,"called":21,"play":19},"2-1":{"total":148,"miss":19,"called":18,"play":31},"2-2":{"total":251,"miss":39,"called":16,"play":51},"3-0":{"total":32,"miss":0,"called":19,"play":0},"3-1":{"total":68,"miss":5,"called":14,"play":11},"3-2":{"total":142,"miss":22,"called":9,"play":46}},"fielding":{"all":{"1":{"balls":8,"out":8},"2":{"balls":5,"out":5},"3":{"balls":40,"out":37},"4":{"balls":49,"out":47},"5":{"balls":47,"out":42},"6":{"balls":42,"out":39},"7":{"balls":64,"out":35},"8":{"balls":84,"out":49},"9":{"balls":83,"out":54}},"ground":{"1":{"balls":7,"out":7},"2":{"balls":2,"out":2},"3":{"balls":30,"out":28},"4":{"balls":35,"out":33},"5":{"balls":27,"out":23},"6":{"balls":30,"out":27},"7":{"balls":6,"out":0},"8":{"balls":15,"out":0},"9":{"balls":12,"out":2}},"air":{"1":{"balls":1,"out":1},"2":{"balls":3,"out":3},"3":{"balls":10,"out":9},"4":{"balls":14,"out":14},"5":{"balls":20,"out":19},"6":{"balls":12,"out":12},"7":{"balls":58,"out":35},"8":{"balls":69,"out":49},"9":{"balls":71,"out":52}}}},"opponents":{"pa":750,"strikeouts":128,"walks":61,"runs":105,"pitches":{"0-0":{"total":743,"miss":66,"called":189,"play":102},"0-1":{"total":361,"miss":38,"called":22,"play":81},"0-2":{"total":181,"miss":18,"called":3,"play":46},"1-0":{"total":276,"miss":31,"called":60,"play":56},"1-1":{"total":271,"miss":39,"called":29,"play":63},"1-2":{"total":251,"miss":32,"called":5,"play":61},"2-0":{"total":87,"miss":8,"called":28,"play":7},"2-1":{"total":140,"miss":16,"called":16,"play":28},"2-2":{"total":221,"miss":31,"called":7,"play":55},"3-0":{"total":30,"miss":0,"called":18,"play":4},"3-1":{"total":62,"miss":5,"called":18,"play":11},"3-2":{"total":131,"miss":11,"called":6,"play":36}},"fielding":{"all":{"1":{"balls":27,"out":25},"2":{"balls":4,"out":4},"3":{"balls":48,"out":44},"4":{"balls":59,"out":55},"5":{"balls":50,"out":39},"6":{"balls":58,"out":54},"7":{"balls":97,"out":45},"8":{"balls":90,"out":55},"9":{"balls":89,"out":38}},"ground":{"1":{"balls":24,"out":23},"2":{"balls":2,"out":2},"3":{"balls":31,"out":28},"4":{"balls":49,"out":45},"5":{"balls":42,"out":31},"6":{"balls":45,"out":41},"7":{"balls":14,"out":0},"8":{"balls":10,"out":0},"9":{"balls":13,"out":0}},"air":{"1":{"balls":3,"out":2},"2":{"balls":2,"out":2},"3":{"balls":17,"out":16},"4":{"balls":10,"out":10},"5":{"balls":8,"out":8},"6":{"balls":13,"out":13},"7":{"balls":83,"out":45},"8":{"balls":80,"out":55},"9":{"balls":76,"out":38}}}},"dates":["2025-10-04","2025-10-05","2025-10-07","2025-10-08","2025-10-12","2025-10-13","2025-10-15","2025-10-16","2025-10-17","2025-10-19","2025-10-20","2025-10-24","2025-10-25","2025-10-27","2025-10-28","2025-10-29","2025-10-31","2025-11-01"]}}</script>
+<script id="bunt-comparison-json" type="application/json">{"edition":"2025-observed-1","source":"Retrosheet 2025 parsed plays, bundled snapshot","source_sha256":"ea7f4be3464825b332ed6f8c19e15310858458ea9eddf3e91a954e5b47f69d73","regular_games":2430,"scope":"2025 regular season; complete half-innings 1–8; first PA start with only a runner on second and no outs","bunt_definition":"A recorded bunt in play, sacrifice credit, or pitch code L, M or O anywhere in the next PA","no_bunt_definition":"No recorded bunt attempt in the next PA; includes hits, walks, strikeouts and other outcomes","interval_method":"95% Wilson binomial intervals; illustrative sampling uncertainty, without team/game clustering or causal adjustment","limits":["Players, pitchers, runners, lineups, inning and tactics differ across cohorts.","Bunt intent when no attempt was recorded is unknown; some attempts ended with a swing or walk.","These are observed rest-of-inning outcomes, not Game 7 forecasts or eventual win probabilities."],"audit":{"complete_half_innings":38860,"later_qualifying_starts_excluded":101,"incomplete_half_innings_excluded":3},"samples":{"all":{"label":"All scorelines","n":2033,"cohorts":{"bunt":{"n":157,"games":154,"runs":{"0":60,"1":59,"2":38},"histogram":{"0":60,"1":59,"2":21,"3":12,"4":4,"8":1},"mean_runs":1.0254777070063694,"sacrifices_credited":58,"bunts_in_play":89,"metrics":{"one":{"count":97,"rate":0.6178343949044586,"interval95":[0.5398723951948854,0.6901677963781565]},"two":{"count":38,"rate":0.24203821656050956,"interval95":[0.1817197410773691,0.3146787584519177]}}},"no_bunt":{"n":1876,"games":1340,"runs":{"0":724,"1":621,"2":531},"histogram":{"0":724,"1":621,"2":275,"3":136,"4":59,"5":30,"6":17,"7":9,"9":4,"10":1},"mean_runs":1.159914712153518,"sacrifices_credited":0,"bunts_in_play":0,"metrics":{"one":{"count":1152,"rate":0.6140724946695096,"interval95":[0.5918316937327891,0.635847080980746]},"two":{"count":531,"rate":0.2830490405117271,"interval95":[0.26312355666862197,0.3038612035724585]}}}}},"down_one":{"label":"Trailing by one","n":260,"cohorts":{"bunt":{"n":32,"games":32,"runs":{"0":11,"1":15,"2":6},"histogram":{"0":11,"1":15,"2":4,"3":1,"4":1},"mean_runs":0.9375,"sacrifices_credited":9,"bunts_in_play":18,"metrics":{"one":{"count":21,"rate":0.65625,"interval95":[0.4831108797896222,0.7958956207556682]},"two":{"count":6,"rate":0.1875,"interval95":[0.08889544689565954,0.3530915520137596]}}},"no_bunt":{"n":228,"games":222,"runs":{"0":97,"1":74,"2":57},"histogram":{"0":97,"1":74,"2":35,"3":13,"4":4,"5":1,"6":2,"7":1,"10":1},"mean_runs":1.0219298245614035,"sacrifices_credited":0,"bunts_in_play":0,"metrics":{"one":{"count":131,"rate":0.5745614035087719,"interval95":[0.5096726560308077,0.6369792852265822]},"two":{"count":57,"rate":0.25,"interval95":[0.19825039106453413,0.31003427648421755]}}}}}}}</script>
 <script id="statcast-postseason-json" type="application/json">""</script>
 <script>
 (() => {
@@ -2674,30 +2725,77 @@ const POSTSEASON_OUTS = JSON.parse($('postseason-outs-json').textContent);
   updatePin();
   markChapter();
 
-  const objectives = {
-    tie: {
-      heading: 'Extend the game or win it here',
-      text: 'Estimate the chance of scoring at least once before the third out. Exactly one run sends it to the 12th. Two or more win it immediately.',
-      evidence: 'Track how the runner can advance or score after each possible plate outcome, including failed bunt attempts.',
-    },
-    win: {
-      heading: 'Win from this position',
-      text: 'Estimate the chance of winning, counting both walk-offs in the 11th and wins after a tie.',
-      evidence: 'Use the same inning outcomes and estimate what happens after a tie, including bullpen options and the next innings.',
-    },
-  };
-  const objectiveButtons = [...document.querySelectorAll('[data-objective]')];
+})();
 
-  function setObjective(value) {
-    const objective = objectives[value];
-    for (const button of objectiveButtons) button.setAttribute('aria-pressed', String(button.dataset.objective === value));
-    document.getElementById('objective-heading').textContent = objective.heading;
-    document.getElementById('objective-text').textContent = objective.text;
-    document.getElementById('objective-evidence').textContent = objective.evidence;
+(() => {
+  'use strict';
+  const evidence = JSON.parse(document.getElementById('bunt-comparison-json').textContent);
+  const sampleSelect = document.getElementById('bunt-sample');
+  const buttons = [...document.querySelectorAll('[data-objective]')];
+  const rows = [...document.querySelectorAll('[data-bunt-cohort]')];
+  const put = (id, value) => { document.getElementById(id).textContent = value; };
+  const number = value => value.toLocaleString('en-CA');
+  const percent = value => `${(value * 100).toFixed(1)}%`;
+  const names = {bunt: 'Bunt attempted', no_bunt: 'No bunt recorded'};
+  let objective = 'one';
+
+  function renderComparison() {
+    const sample = evidence.samples[sampleSelect.value];
+    const one = objective === 'one';
+    for (const button of buttons) button.setAttribute('aria-pressed', String(button.dataset.objective === objective));
+    put('bunt-sample-note', `${number(sample.n)} comparable starts · 2025 MLB · innings 1–8. ${sampleSelect.value === 'all' ? 'Any score margin; runners and outs match.' : 'The batting team trailed by one; runners and outs also match.'}`);
+    put('objective-heading', one ? 'How often did at least one run score?' : 'How often did two or more runs score?');
+    put('objective-text', one
+      ? 'In Toronto’s situation, exactly one run would send the game to the 12th; two would win it in the 11th.'
+      : 'Two runs would win it in the 11th. This measure does not include a later victory after tying the game.');
+    for (const row of rows) {
+      const cohort = sample.cohorts[row.dataset.buntCohort];
+      const metric = cohort.metrics[objective];
+      const [low, high] = metric.interval95;
+      row.querySelector('strong').textContent = percent(metric.rate);
+      row.querySelector('.bunt-bar-fill').style.width = percent(metric.rate);
+      row.querySelector('.bunt-bar-dot').style.left = percent(metric.rate);
+      row.querySelector('.bunt-bar-interval').style.left = percent(low);
+      row.querySelector('.bunt-bar-interval').style.width = percent(high - low);
+      row.querySelector('.bunt-rate-detail').textContent = `${number(metric.count)} of ${number(cohort.n)} cases · 95% interval ${percent(low)}–${percent(high)}`;
+    }
+    const bunt = sample.cohorts.bunt;
+    const noBunt = sample.cohorts.no_bunt;
+    const gap = 100 * (noBunt.metrics[objective].rate - bunt.metrics[objective].rate);
+    const difference = Math.abs(gap).toFixed(1);
+    const lead = Math.abs(gap) < 1
+      ? `The observed rates are close: ${difference} percentage points apart.`
+      : `${gap > 0 ? 'No recorded bunt' : 'Bunt attempts'} had the higher observed rate, by ${difference} percentage points.`;
+    put('bunt-takeaway', `${lead} The uncertainty ranges overlap, and the groups contain different players and situations.`);
+    put('objective-evidence', `Bars show observed rates; lines show approximate 95% sampling intervals. The bunt sample contains ${number(bunt.n)} attempts, including ${number(bunt.sacrifices_credited)} credited sacrifices. ${bunt.n < 50 ? 'This narrower sample is small; treat the apparent difference cautiously.' : 'This comparison includes unsuccessful attempts and changes of approach.'}`);
+    const body = document.getElementById('bunt-outcomes');
+    body.replaceChildren();
+    for (const key of ['bunt', 'no_bunt']) {
+      const cohort = sample.cohorts[key];
+      const tr = document.createElement('tr');
+      const th = document.createElement('th');
+      th.scope = 'row';
+      th.textContent = names[key];
+      tr.append(th);
+      for (const bin of ['0', '1', '2']) {
+        const td = document.createElement('td');
+        const count = document.createElement('strong');
+        count.textContent = number(cohort.runs[bin]);
+        const share = document.createElement('span');
+        share.textContent = percent(cohort.runs[bin] / cohort.n);
+        td.append(count, share);
+        tr.append(td);
+      }
+      body.append(tr);
+    }
+    put('bunt-mean-runs', `Average runs remaining: ${bunt.mean_runs.toFixed(2)} after a bunt attempt; ${noBunt.mean_runs.toFixed(2)} with no recorded bunt. These averages use the selected historical sample; the observed-play RE24 uses the separate league state table.`);
   }
-
-  for (const button of objectiveButtons) button.addEventListener('click', () => setObjective(button.dataset.objective));
-  setObjective('tie');
+  for (const button of buttons) button.addEventListener('click', () => {
+    objective = button.dataset.objective;
+    renderComparison();
+  });
+  sampleSelect.addEventListener('change', renderComparison);
+  renderComparison();
 })();
 
 (() => {

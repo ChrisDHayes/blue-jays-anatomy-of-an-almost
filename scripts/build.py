@@ -114,6 +114,21 @@ def build():
     diagnostic = json.loads(read(DATA / "season_streak_diagnostics.json"))
     bat_flip = json.loads(read(DATA / "bat_flip_2015.json"))
     postseason_outs = json.loads(read(DATA / "postseason_outs.json"))
+    bunt_comparison = json.loads(read(DATA / "bunt_comparison.json"))
+    bunt_cases = load_csv(ROOT / "methods" / "bunt_comparison_cases.csv")
+    require(len({(row["gid"], row["inning"], row["top_bot"]) for row in bunt_cases}) == len(bunt_cases),
+            "Bunt comparison must use disjoint half-innings.")
+    for scope, sample in bunt_comparison["samples"].items():
+        selected = [row for row in bunt_cases if scope == "all" or int(row["score_diff"]) == -1]
+        require(len(selected) == sample["n"], "Bunt comparison sample count is out of sync.")
+        for name, cohort in sample["cohorts"].items():
+            cases = [row for row in selected if row["cohort"] == name]
+            require(len(cases) == cohort["n"] == sum(cohort["runs"].values()), "Bunt cohort counts disagree.")
+            for key, threshold in (("one", 1), ("two", 2)):
+                hits = sum(int(row["runs_remaining"]) >= threshold for row in cases)
+                metric = cohort["metrics"][key]
+                require(hits == metric["count"] and hits / len(cases) == metric["rate"],
+                        "Bunt comparison rate is out of sync with its case ledger.")
     statcast_export = DATA / "statcast_postseason.csv"
     check_evidence(games, evidence, diagnostic, bat_flip)
     require(
@@ -127,7 +142,7 @@ def build():
     return "\n".join((
         read(SOURCE / "head.html").rstrip("\n"),
         "<style>",
-        *(read(styles / f"{file}.css") for file in ("base", "editorial", "scrollytelling", "replays", "outs", "methods")),
+        *(read(styles / f"{file}.css") for file in ("base", "editorial", "scrollytelling", "replays", "outs", "methods", "bunt_comparison")),
         "</style>\n</head>\n<body>",
         render_story(),
         embed_data("evidence-json", evidence),
@@ -135,12 +150,13 @@ def build():
         embed_data("diagnostic-json", diagnostic),
         embed_data("bat-flip-json", bat_flip),
         embed_data("postseason-outs-json", postseason_outs),
+        embed_data("bunt-comparison-json", bunt_comparison),
         embed_data("statcast-postseason-json", read(statcast_export) if statcast_export.is_file() else ""),
         "<script>\n(() => {\n'use strict';",
         *(read(scripts / f"{file}.js") for file in ("atlas_charts", "atlas", "game", "bat_flip", "outs", "pitch_tracking")),
         "})();\n</script>",
         "<script>",
-        *(read(scripts / f"{file}.js") for file in ("season", "journey", "definitions")),
+        *(read(scripts / f"{file}.js") for file in ("season", "journey", "bunt_comparison", "definitions")),
         "</script>\n</body>\n</html>\n",
     )).encode("utf-8")
 
