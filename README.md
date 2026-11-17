@@ -6,7 +6,7 @@ The story begins with family and the memory of José Bautista’s bat flip, then
 
 ## Read and explore
 
-Open `index.html` in a browser. The story, charts, definitions and illustrations run from the file itself. Video clips and publisher references open on their original sites. Bautista’s clip appears when his home run is selected in the 2015 replay. Springer and Barger’s clips sit under their respective postseason series in **One more win.** The Game 7 replay leads to Kiner-Falefa’s clip and the analysis of the recorded sacrifice.
+[Open the interactive story](https://chrisdhayes.github.io/blue-jays-anatomy-of-an-almost/). To run a local copy, open `index.html` in a browser. The story, charts, definitions and illustrations run from the file itself. Video clips and publisher references open on their original sites. Bautista’s clip appears when his home run is selected in the 2015 replay. Springer and Barger’s clips sit under their respective postseason series in **One more win.** The Game 7 replay leads to Kiner-Falefa’s clip and the analysis of the recorded sacrifice.
 
 Open **How Toronto got outs in October** for the pitch-count heatmap and fielding comparison. The count heatmap shows both teams’ rates in every square. Load a pitch-level Statcast CSV under **Where pitches crossed the plate** for side-by-side location heatmaps. Switch to **Individual pitches** to inspect speed, type and pitcher. [Getting a tracking export](docs/METHODS.md#pitch-tracking-from-behind-home-plate).
 
