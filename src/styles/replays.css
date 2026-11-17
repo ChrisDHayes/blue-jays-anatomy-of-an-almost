@@ -1,0 +1,80 @@
+.bat-flip {
+  margin-top: clamp(26px, 3.8vw, 48px);
+}
+.story-disclosure { border-block: 1px solid #c7beb0; }
+.story-disclosure > summary { padding: clamp(12px, 2vw, 20px) 0; cursor: pointer; color: #214a68; font: 500 clamp(1.14rem, 2.1vw, 1.48rem)/1.35 var(--serif); }
+.story-disclosure > summary::marker { color: #205b93; }
+.story-disclosure[open] > summary { border-bottom: 1px solid #d4ccbd; }
+.story-disclosure-body { padding: 14px 0 17px; }
+.bat-flip-summary-score { display: inline-block; margin-left: clamp(12px, 2.2vw, 30px); color: #486276; font: 700 .78rem var(--ui); }
+.bat-flip-heading { display: flex; align-items: end; justify-content: space-between; gap: 12px 28px; margin-bottom: 17px; }
+.bat-flip-heading .eyebrow { margin: 0 0 6px; }
+.bat-flip-heading p:not(.eyebrow) { margin: 8px 0 0; color: #344f62; }
+.bat-flip-final { display: grid; gap: 3px; flex-shrink: 0; color: #184d77; }
+.bat-flip-final span { font-size: .69rem; text-transform: uppercase; letter-spacing: .09em; }
+.bat-flip-final strong { font: 500 clamp(1.45rem, 2.7vw, 2.1rem)/1.15 var(--serif); }
+.bat-flip-exhibit { display: grid; grid-template-columns: minmax(0, 1.5fr) minmax(0, 1fr); gap: 18px; border: 1px solid #cec8ba; padding: clamp(12px, 2vw, 24px); border-radius: 6px; background: #faf7f0; box-shadow: inset 0 3px #397aa8; }
+.bat-flip-plot, .bat-flip-details { min-width: 0; }
+.bat-flip-plot h3, .bat-flip-details h3 { margin: 0 0 8px; font: 400 clamp(1.35rem, 2.2vw, 1.9rem)/1.12 var(--serif); }
+#bat-flip-chart svg { display: block; width: 100%; height: auto; }
+.bat-flip-inning-band { fill: #d9e9f5; }
+.bat-flip-chart-score { font: 780 13px var(--ui); }
+.bat-flip-chart-note, .bat-flip-sources { font-size: .75rem; line-height: 1.45; color: #4b6374; margin: 5px 0 0; }
+.bat-flip-controls { display: flex; flex-wrap: wrap; align-items: stretch; gap: 6px; padding-bottom: 14px; border-bottom: 1px solid #d9d2c4; margin-bottom: 13px; }
+.bat-flip-controls button { border: 1px solid #aab8c4; background: #f7f3e9; color: #25465e; border-radius: 4px; min-height: 44px; padding: 6px 9px; cursor: pointer; font-size: .75rem; font-weight: 730; }
+.bat-flip-controls button[aria-pressed="true"] { color: #fff; background: #1e537f; border-color: #1e537f; }
+.bat-flip-details .eyebrow { margin: 0 0 5px; }
+.bat-flip-score { display: inline-block; color: #174c77; font-family: var(--mono); font-size: .95rem; }
+.bat-flip-details #bat-flip-description { color: #304b60; margin: 7px 0 11px; font-size: .89rem; line-height: 1.5; }
+.bat-flip-sources { display: flex; flex-wrap: wrap; gap: 5px 7px; margin-top: 9px; }
+.bat-flip-bridge { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 8px 20px; margin-top: 16px; }
+.bat-flip-bridge p { max-width: 66ch; margin: 0; }
+.bat-flip-bridge p + p { margin-top: 10px; }
+.bat-flip-bridge .chapter-next { margin: 0; }
+
+.game-replay { scroll-margin-top: 8px; }
+.game7-banner-copy p:not(.eyebrow) { max-width: 53ch; font-family: var(--serif); font-size: clamp(1.1rem, 2vw, 1.5rem); line-height: 1.42; }
+.game-reflection { max-width: 65ch; color: #e6edf1; margin: 0 0 clamp(23px, 3.3vw, 42px); font: 400 clamp(1.08rem, 1.9vw, 1.4rem)/1.52 var(--serif); }
+.game .game-layout > .night-card:first-child { background: #0b2032; box-shadow: inset 0 3px #4b8cbc; min-width: 0; }
+.game-inning-band { fill: #203d54; }
+.game-inning-marker { stroke: #dec489; stroke-dasharray: 4 3; }
+.game-inning-tick { fill: #c1d2df; font: 500 11px var(--ui); }
+.game-inning-tick.later { fill: #829bb0; }
+.game-inning-tick.current { fill: #f0ce92; font-weight: 800; }
+.game-score-label { font: 780 17px var(--ui); }
+.game-guide h3 { margin: 0 0 12px; color: #f5efe1; font: 400 clamp(1.6rem, 2.6vw, 2.2rem)/1.14 var(--serif); }
+.game-guide-choices { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 8px; }
+.game-guide-choices button { display: grid; gap: 3px; text-align: left; align-content: center; min-height: 63px; border: 1px solid #4b6982; border-radius: 5px; padding: 8px clamp(7px, 1.3vw, 17px); color: #f0ece1; background: #152c43; font-size: clamp(.76rem, 1.32vw, .99rem); line-height: 1.25; font-weight: 720; cursor: pointer; }
+.game-guide-choices button span { color: #bbcedd; font-size: .67rem; text-transform: uppercase; letter-spacing: .09em; font-weight: 680; }
+.game-guide-choices button[aria-pressed="true"] { border-color: #e2bd79; background: #223b53; box-shadow: inset 0 3px #e2bd79; }
+.game-guide-choices button[aria-pressed="true"] span { color: #f0cf98; }
+#game-guide-caption { color: #e0e8ef; margin: 10px 0; min-height: 2.9em; font-size: .92rem; }
+.game-play-explorer { margin: 2px 0 15px; border-block: 1px solid #3b566d; }
+.game-play-explorer summary { cursor: pointer; color: #b8d7ef; font-size: .84rem; font-weight: 750; padding: 11px 0; }
+.game-play-explorer .game-steps { margin: 0 0 11px; }
+.game .game-final { margin-top: 24px; margin-bottom: 11px; }
+.game-aftermath { margin: 18px 0 24px; max-width: 58ch; color: #f0e7d9; font: 400 clamp(1.13rem, 2.1vw, 1.49rem)/1.47 var(--serif); }
+.game-handoff.story-end-links { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 12px 23px; }
+.counterfactual { padding: clamp(15px, 2.6vw, 28px) 0; border-top-width: 1px; }
+.counterfactual-intro p { margin: 0 0 14px; }
+.counterfactual .decision-paths { margin-top: 15px; }
+.observed-path h3 + p { margin-bottom: 0; }
+.decision-return { display: inline-flex; align-items: center; gap: 5px; min-height: 44px; }
+.epilogue .epilogue-close { font: 400 clamp(1.13rem, 2.15vw, 1.46rem)/1.52 var(--serif); margin-top: 23px; }
+
+@media (max-width: 760px) {
+  .bat-flip-heading { align-items: start; flex-direction: column; }
+  .bat-flip-summary-score { display: block; margin: 4px 0 0 14px; }
+  .bat-flip-exhibit { grid-template-columns: minmax(0, 1fr); }
+  .bat-flip-details { border-top: 1px solid #d9d2c4; padding-top: 12px; }
+  .bat-flip-bridge { margin-top: 13px; }
+  .game-guide-choices { gap: 5px; }
+  .game-guide-choices button span { letter-spacing: .04em; font-size: .6rem; }
+  .game-guide-choices button { min-height: 62px; }
+}
+
+@media (max-width: 560px) {
+  .series-results { grid-template-columns: minmax(0, 1fr); }
+  .series-results li { border-left: 0; padding: 8px 0; }
+  .series-results li + li { border-top: 1px solid var(--rule); }
+}

@@ -1,0 +1,1626 @@
+{
+  "NYY": {
+    "games": 4,
+    "toronto": {
+      "pa": 156,
+      "strikeouts": 37,
+      "walks": 15,
+      "runs": 19,
+      "pitches": {
+        "0-0": {
+          "total": 153,
+          "miss": 15,
+          "called": 44,
+          "play": 18
+        },
+        "0-1": {
+          "total": 79,
+          "miss": 13,
+          "called": 8,
+          "play": 15
+        },
+        "0-2": {
+          "total": 34,
+          "miss": 3,
+          "called": 1,
+          "play": 8
+        },
+        "1-0": {
+          "total": 56,
+          "miss": 10,
+          "called": 16,
+          "play": 4
+        },
+        "1-1": {
+          "total": 66,
+          "miss": 8,
+          "called": 6,
+          "play": 15
+        },
+        "1-2": {
+          "total": 57,
+          "miss": 12,
+          "called": 1,
+          "play": 12
+        },
+        "2-0": {
+          "total": 18,
+          "miss": 0,
+          "called": 6,
+          "play": 3
+        },
+        "2-1": {
+          "total": 30,
+          "miss": 4,
+          "called": 3,
+          "play": 4
+        },
+        "2-2": {
+          "total": 46,
+          "miss": 7,
+          "called": 2,
+          "play": 9
+        },
+        "3-0": {
+          "total": 8,
+          "miss": 0,
+          "called": 6,
+          "play": 0
+        },
+        "3-1": {
+          "total": 18,
+          "miss": 2,
+          "called": 3,
+          "play": 5
+        },
+        "3-2": {
+          "total": 32,
+          "miss": 7,
+          "called": 3,
+          "play": 9
+        }
+      },
+      "fielding": {
+        "all": {
+          "1": {
+            "balls": 3,
+            "out": 3
+          },
+          "2": {
+            "balls": 2,
+            "out": 2
+          },
+          "3": {
+            "balls": 11,
+            "out": 10
+          },
+          "4": {
+            "balls": 8,
+            "out": 7
+          },
+          "5": {
+            "balls": 12,
+            "out": 11
+          },
+          "6": {
+            "balls": 8,
+            "out": 7
+          },
+          "7": {
+            "balls": 19,
+            "out": 10
+          },
+          "8": {
+            "balls": 18,
+            "out": 10
+          },
+          "9": {
+            "balls": 17,
+            "out": 6
+          }
+        },
+        "ground": {
+          "1": {
+            "balls": 2,
+            "out": 2
+          },
+          "2": {
+            "balls": 1,
+            "out": 1
+          },
+          "3": {
+            "balls": 10,
+            "out": 9
+          },
+          "4": {
+            "balls": 5,
+            "out": 4
+          },
+          "5": {
+            "balls": 6,
+            "out": 6
+          },
+          "6": {
+            "balls": 4,
+            "out": 3
+          },
+          "7": {
+            "balls": 1,
+            "out": 0
+          },
+          "8": {
+            "balls": 1,
+            "out": 0
+          },
+          "9": {
+            "balls": 5,
+            "out": 1
+          }
+        },
+        "air": {
+          "1": {
+            "balls": 1,
+            "out": 1
+          },
+          "2": {
+            "balls": 1,
+            "out": 1
+          },
+          "3": {
+            "balls": 1,
+            "out": 1
+          },
+          "4": {
+            "balls": 3,
+            "out": 3
+          },
+          "5": {
+            "balls": 6,
+            "out": 5
+          },
+          "6": {
+            "balls": 4,
+            "out": 4
+          },
+          "7": {
+            "balls": 18,
+            "out": 10
+          },
+          "8": {
+            "balls": 17,
+            "out": 10
+          },
+          "9": {
+            "balls": 12,
+            "out": 5
+          }
+        }
+      }
+    },
+    "opponents": {
+      "pa": 161,
+      "strikeouts": 24,
+      "walks": 8,
+      "runs": 34,
+      "pitches": {
+        "0-0": {
+          "total": 160,
+          "miss": 14,
+          "called": 39,
+          "play": 21
+        },
+        "0-1": {
+          "total": 78,
+          "miss": 12,
+          "called": 1,
+          "play": 14
+        },
+        "0-2": {
+          "total": 43,
+          "miss": 1,
+          "called": 0,
+          "play": 13
+        },
+        "1-0": {
+          "total": 60,
+          "miss": 7,
+          "called": 12,
+          "play": 15
+        },
+        "1-1": {
+          "total": 63,
+          "miss": 5,
+          "called": 7,
+          "play": 12
+        },
+        "1-2": {
+          "total": 62,
+          "miss": 7,
+          "called": 1,
+          "play": 16
+        },
+        "2-0": {
+          "total": 14,
+          "miss": 0,
+          "called": 2,
+          "play": 2
+        },
+        "2-1": {
+          "total": 32,
+          "miss": 4,
+          "called": 3,
+          "play": 9
+        },
+        "2-2": {
+          "total": 46,
+          "miss": 7,
+          "called": 2,
+          "play": 14
+        },
+        "3-0": {
+          "total": 5,
+          "miss": 0,
+          "called": 3,
+          "play": 1
+        },
+        "3-1": {
+          "total": 8,
+          "miss": 0,
+          "called": 3,
+          "play": 2
+        },
+        "3-2": {
+          "total": 21,
+          "miss": 2,
+          "called": 1,
+          "play": 8
+        }
+      },
+      "fielding": {
+        "all": {
+          "1": {
+            "balls": 2,
+            "out": 2
+          },
+          "2": {
+            "balls": 1,
+            "out": 1
+          },
+          "3": {
+            "balls": 8,
+            "out": 7
+          },
+          "4": {
+            "balls": 12,
+            "out": 10
+          },
+          "5": {
+            "balls": 14,
+            "out": 11
+          },
+          "6": {
+            "balls": 10,
+            "out": 10
+          },
+          "7": {
+            "balls": 27,
+            "out": 13
+          },
+          "8": {
+            "balls": 17,
+            "out": 11
+          },
+          "9": {
+            "balls": 27,
+            "out": 11
+          }
+        },
+        "ground": {
+          "1": {
+            "balls": 2,
+            "out": 2
+          },
+          "2": {
+            "balls": 0,
+            "out": 0
+          },
+          "3": {
+            "balls": 6,
+            "out": 5
+          },
+          "4": {
+            "balls": 9,
+            "out": 7
+          },
+          "5": {
+            "balls": 13,
+            "out": 10
+          },
+          "6": {
+            "balls": 7,
+            "out": 7
+          },
+          "7": {
+            "balls": 4,
+            "out": 0
+          },
+          "8": {
+            "balls": 3,
+            "out": 0
+          },
+          "9": {
+            "balls": 4,
+            "out": 0
+          }
+        },
+        "air": {
+          "1": {
+            "balls": 0,
+            "out": 0
+          },
+          "2": {
+            "balls": 1,
+            "out": 1
+          },
+          "3": {
+            "balls": 2,
+            "out": 2
+          },
+          "4": {
+            "balls": 3,
+            "out": 3
+          },
+          "5": {
+            "balls": 1,
+            "out": 1
+          },
+          "6": {
+            "balls": 3,
+            "out": 3
+          },
+          "7": {
+            "balls": 23,
+            "out": 13
+          },
+          "8": {
+            "balls": 14,
+            "out": 11
+          },
+          "9": {
+            "balls": 23,
+            "out": 11
+          }
+        }
+      }
+    },
+    "dates": [
+      "2025-10-04",
+      "2025-10-05",
+      "2025-10-07",
+      "2025-10-08"
+    ]
+  },
+  "SEA": {
+    "games": 7,
+    "toronto": {
+      "pa": 258,
+      "strikeouts": 71,
+      "walks": 29,
+      "runs": 30,
+      "pitches": {
+        "0-0": {
+          "total": 256,
+          "miss": 32,
+          "called": 66,
+          "play": 31
+        },
+        "0-1": {
+          "total": 129,
+          "miss": 20,
+          "called": 11,
+          "play": 21
+        },
+        "0-2": {
+          "total": 59,
+          "miss": 10,
+          "called": 3,
+          "play": 8
+        },
+        "1-0": {
+          "total": 96,
+          "miss": 9,
+          "called": 20,
+          "play": 8
+        },
+        "1-1": {
+          "total": 102,
+          "miss": 15,
+          "called": 8,
+          "play": 15
+        },
+        "1-2": {
+          "total": 86,
+          "miss": 17,
+          "called": 3,
+          "play": 13
+        },
+        "2-0": {
+          "total": 42,
+          "miss": 5,
+          "called": 9,
+          "play": 8
+        },
+        "2-1": {
+          "total": 67,
+          "miss": 8,
+          "called": 9,
+          "play": 15
+        },
+        "2-2": {
+          "total": 96,
+          "miss": 16,
+          "called": 8,
+          "play": 16
+        },
+        "3-0": {
+          "total": 12,
+          "miss": 0,
+          "called": 6,
+          "play": 0
+        },
+        "3-1": {
+          "total": 27,
+          "miss": 2,
+          "called": 6,
+          "play": 4
+        },
+        "3-2": {
+          "total": 57,
+          "miss": 8,
+          "called": 3,
+          "play": 17
+        }
+      },
+      "fielding": {
+        "all": {
+          "1": {
+            "balls": 2,
+            "out": 2
+          },
+          "2": {
+            "balls": 2,
+            "out": 2
+          },
+          "3": {
+            "balls": 14,
+            "out": 13
+          },
+          "4": {
+            "balls": 22,
+            "out": 21
+          },
+          "5": {
+            "balls": 15,
+            "out": 13
+          },
+          "6": {
+            "balls": 15,
+            "out": 14
+          },
+          "7": {
+            "balls": 18,
+            "out": 10
+          },
+          "8": {
+            "balls": 30,
+            "out": 16
+          },
+          "9": {
+            "balls": 24,
+            "out": 16
+          }
+        },
+        "ground": {
+          "1": {
+            "balls": 2,
+            "out": 2
+          },
+          "2": {
+            "balls": 1,
+            "out": 1
+          },
+          "3": {
+            "balls": 10,
+            "out": 10
+          },
+          "4": {
+            "balls": 18,
+            "out": 17
+          },
+          "5": {
+            "balls": 10,
+            "out": 8
+          },
+          "6": {
+            "balls": 10,
+            "out": 9
+          },
+          "7": {
+            "balls": 3,
+            "out": 0
+          },
+          "8": {
+            "balls": 6,
+            "out": 0
+          },
+          "9": {
+            "balls": 2,
+            "out": 0
+          }
+        },
+        "air": {
+          "1": {
+            "balls": 0,
+            "out": 0
+          },
+          "2": {
+            "balls": 1,
+            "out": 1
+          },
+          "3": {
+            "balls": 4,
+            "out": 3
+          },
+          "4": {
+            "balls": 4,
+            "out": 4
+          },
+          "5": {
+            "balls": 5,
+            "out": 5
+          },
+          "6": {
+            "balls": 5,
+            "out": 5
+          },
+          "7": {
+            "balls": 15,
+            "out": 10
+          },
+          "8": {
+            "balls": 24,
+            "out": 16
+          },
+          "9": {
+            "balls": 22,
+            "out": 16
+          }
+        }
+      }
+    },
+    "opponents": {
+      "pa": 270,
+      "strikeouts": 40,
+      "walks": 25,
+      "runs": 37,
+      "pitches": {
+        "0-0": {
+          "total": 267,
+          "miss": 17,
+          "called": 70,
+          "play": 41
+        },
+        "0-1": {
+          "total": 130,
+          "miss": 12,
+          "called": 8,
+          "play": 34
+        },
+        "0-2": {
+          "total": 55,
+          "miss": 8,
+          "called": 1,
+          "play": 16
+        },
+        "1-0": {
+          "total": 96,
+          "miss": 11,
+          "called": 21,
+          "play": 19
+        },
+        "1-1": {
+          "total": 91,
+          "miss": 15,
+          "called": 9,
+          "play": 25
+        },
+        "1-2": {
+          "total": 80,
+          "miss": 8,
+          "called": 2,
+          "play": 23
+        },
+        "2-0": {
+          "total": 34,
+          "miss": 2,
+          "called": 16,
+          "play": 5
+        },
+        "2-1": {
+          "total": 44,
+          "miss": 5,
+          "called": 2,
+          "play": 11
+        },
+        "2-2": {
+          "total": 78,
+          "miss": 13,
+          "called": 1,
+          "play": 19
+        },
+        "3-0": {
+          "total": 9,
+          "miss": 0,
+          "called": 5,
+          "play": 0
+        },
+        "3-1": {
+          "total": 20,
+          "miss": 4,
+          "called": 5,
+          "play": 2
+        },
+        "3-2": {
+          "total": 38,
+          "miss": 2,
+          "called": 1,
+          "play": 8
+        }
+      },
+      "fielding": {
+        "all": {
+          "1": {
+            "balls": 12,
+            "out": 11
+          },
+          "2": {
+            "balls": 3,
+            "out": 3
+          },
+          "3": {
+            "balls": 17,
+            "out": 16
+          },
+          "4": {
+            "balls": 23,
+            "out": 23
+          },
+          "5": {
+            "balls": 16,
+            "out": 13
+          },
+          "6": {
+            "balls": 22,
+            "out": 20
+          },
+          "7": {
+            "balls": 29,
+            "out": 16
+          },
+          "8": {
+            "balls": 37,
+            "out": 19
+          },
+          "9": {
+            "balls": 33,
+            "out": 17
+          }
+        },
+        "ground": {
+          "1": {
+            "balls": 12,
+            "out": 11
+          },
+          "2": {
+            "balls": 2,
+            "out": 2
+          },
+          "3": {
+            "balls": 11,
+            "out": 10
+          },
+          "4": {
+            "balls": 16,
+            "out": 16
+          },
+          "5": {
+            "balls": 14,
+            "out": 11
+          },
+          "6": {
+            "balls": 18,
+            "out": 16
+          },
+          "7": {
+            "balls": 5,
+            "out": 0
+          },
+          "8": {
+            "balls": 4,
+            "out": 0
+          },
+          "9": {
+            "balls": 4,
+            "out": 0
+          }
+        },
+        "air": {
+          "1": {
+            "balls": 0,
+            "out": 0
+          },
+          "2": {
+            "balls": 1,
+            "out": 1
+          },
+          "3": {
+            "balls": 6,
+            "out": 6
+          },
+          "4": {
+            "balls": 7,
+            "out": 7
+          },
+          "5": {
+            "balls": 2,
+            "out": 2
+          },
+          "6": {
+            "balls": 4,
+            "out": 4
+          },
+          "7": {
+            "balls": 24,
+            "out": 16
+          },
+          "8": {
+            "balls": 33,
+            "out": 19
+          },
+          "9": {
+            "balls": 29,
+            "out": 17
+          }
+        }
+      }
+    },
+    "dates": [
+      "2025-10-12",
+      "2025-10-13",
+      "2025-10-15",
+      "2025-10-16",
+      "2025-10-17",
+      "2025-10-19",
+      "2025-10-20"
+    ]
+  },
+  "LAD": {
+    "games": 7,
+    "toronto": {
+      "pa": 300,
+      "strikeouts": 72,
+      "walks": 33,
+      "runs": 26,
+      "pitches": {
+        "0-0": {
+          "total": 293,
+          "miss": 17,
+          "called": 88,
+          "play": 30
+        },
+        "0-1": {
+          "total": 152,
+          "miss": 24,
+          "called": 15,
+          "play": 27
+        },
+        "0-2": {
+          "total": 69,
+          "miss": 10,
+          "called": 2,
+          "play": 9
+        },
+        "1-0": {
+          "total": 111,
+          "miss": 14,
+          "called": 34,
+          "play": 8
+        },
+        "1-1": {
+          "total": 132,
+          "miss": 25,
+          "called": 13,
+          "play": 28
+        },
+        "1-2": {
+          "total": 121,
+          "miss": 21,
+          "called": 2,
+          "play": 23
+        },
+        "2-0": {
+          "total": 36,
+          "miss": 4,
+          "called": 6,
+          "play": 8
+        },
+        "2-1": {
+          "total": 51,
+          "miss": 7,
+          "called": 6,
+          "play": 12
+        },
+        "2-2": {
+          "total": 109,
+          "miss": 16,
+          "called": 6,
+          "play": 26
+        },
+        "3-0": {
+          "total": 12,
+          "miss": 0,
+          "called": 7,
+          "play": 0
+        },
+        "3-1": {
+          "total": 23,
+          "miss": 1,
+          "called": 5,
+          "play": 2
+        },
+        "3-2": {
+          "total": 53,
+          "miss": 7,
+          "called": 3,
+          "play": 20
+        }
+      },
+      "fielding": {
+        "all": {
+          "1": {
+            "balls": 3,
+            "out": 3
+          },
+          "2": {
+            "balls": 1,
+            "out": 1
+          },
+          "3": {
+            "balls": 15,
+            "out": 14
+          },
+          "4": {
+            "balls": 19,
+            "out": 19
+          },
+          "5": {
+            "balls": 20,
+            "out": 18
+          },
+          "6": {
+            "balls": 19,
+            "out": 18
+          },
+          "7": {
+            "balls": 27,
+            "out": 15
+          },
+          "8": {
+            "balls": 36,
+            "out": 23
+          },
+          "9": {
+            "balls": 42,
+            "out": 32
+          }
+        },
+        "ground": {
+          "1": {
+            "balls": 3,
+            "out": 3
+          },
+          "2": {
+            "balls": 0,
+            "out": 0
+          },
+          "3": {
+            "balls": 10,
+            "out": 9
+          },
+          "4": {
+            "balls": 12,
+            "out": 12
+          },
+          "5": {
+            "balls": 11,
+            "out": 9
+          },
+          "6": {
+            "balls": 16,
+            "out": 15
+          },
+          "7": {
+            "balls": 2,
+            "out": 0
+          },
+          "8": {
+            "balls": 8,
+            "out": 0
+          },
+          "9": {
+            "balls": 5,
+            "out": 1
+          }
+        },
+        "air": {
+          "1": {
+            "balls": 0,
+            "out": 0
+          },
+          "2": {
+            "balls": 1,
+            "out": 1
+          },
+          "3": {
+            "balls": 5,
+            "out": 5
+          },
+          "4": {
+            "balls": 7,
+            "out": 7
+          },
+          "5": {
+            "balls": 9,
+            "out": 9
+          },
+          "6": {
+            "balls": 3,
+            "out": 3
+          },
+          "7": {
+            "balls": 25,
+            "out": 15
+          },
+          "8": {
+            "balls": 28,
+            "out": 23
+          },
+          "9": {
+            "balls": 37,
+            "out": 31
+          }
+        }
+      }
+    },
+    "opponents": {
+      "pa": 319,
+      "strikeouts": 64,
+      "walks": 28,
+      "runs": 34,
+      "pitches": {
+        "0-0": {
+          "total": 316,
+          "miss": 35,
+          "called": 80,
+          "play": 40
+        },
+        "0-1": {
+          "total": 153,
+          "miss": 14,
+          "called": 13,
+          "play": 33
+        },
+        "0-2": {
+          "total": 83,
+          "miss": 9,
+          "called": 2,
+          "play": 17
+        },
+        "1-0": {
+          "total": 120,
+          "miss": 13,
+          "called": 27,
+          "play": 22
+        },
+        "1-1": {
+          "total": 117,
+          "miss": 19,
+          "called": 13,
+          "play": 26
+        },
+        "1-2": {
+          "total": 109,
+          "miss": 17,
+          "called": 2,
+          "play": 22
+        },
+        "2-0": {
+          "total": 39,
+          "miss": 6,
+          "called": 10,
+          "play": 0
+        },
+        "2-1": {
+          "total": 64,
+          "miss": 7,
+          "called": 11,
+          "play": 8
+        },
+        "2-2": {
+          "total": 97,
+          "miss": 11,
+          "called": 4,
+          "play": 22
+        },
+        "3-0": {
+          "total": 16,
+          "miss": 0,
+          "called": 10,
+          "play": 3
+        },
+        "3-1": {
+          "total": 34,
+          "miss": 1,
+          "called": 10,
+          "play": 7
+        },
+        "3-2": {
+          "total": 72,
+          "miss": 7,
+          "called": 4,
+          "play": 20
+        }
+      },
+      "fielding": {
+        "all": {
+          "1": {
+            "balls": 13,
+            "out": 12
+          },
+          "2": {
+            "balls": 0,
+            "out": 0
+          },
+          "3": {
+            "balls": 23,
+            "out": 21
+          },
+          "4": {
+            "balls": 24,
+            "out": 22
+          },
+          "5": {
+            "balls": 20,
+            "out": 15
+          },
+          "6": {
+            "balls": 26,
+            "out": 24
+          },
+          "7": {
+            "balls": 41,
+            "out": 16
+          },
+          "8": {
+            "balls": 36,
+            "out": 25
+          },
+          "9": {
+            "balls": 29,
+            "out": 10
+          }
+        },
+        "ground": {
+          "1": {
+            "balls": 10,
+            "out": 10
+          },
+          "2": {
+            "balls": 0,
+            "out": 0
+          },
+          "3": {
+            "balls": 14,
+            "out": 13
+          },
+          "4": {
+            "balls": 24,
+            "out": 22
+          },
+          "5": {
+            "balls": 15,
+            "out": 10
+          },
+          "6": {
+            "balls": 20,
+            "out": 18
+          },
+          "7": {
+            "balls": 5,
+            "out": 0
+          },
+          "8": {
+            "balls": 3,
+            "out": 0
+          },
+          "9": {
+            "balls": 5,
+            "out": 0
+          }
+        },
+        "air": {
+          "1": {
+            "balls": 3,
+            "out": 2
+          },
+          "2": {
+            "balls": 0,
+            "out": 0
+          },
+          "3": {
+            "balls": 9,
+            "out": 8
+          },
+          "4": {
+            "balls": 0,
+            "out": 0
+          },
+          "5": {
+            "balls": 5,
+            "out": 5
+          },
+          "6": {
+            "balls": 6,
+            "out": 6
+          },
+          "7": {
+            "balls": 36,
+            "out": 16
+          },
+          "8": {
+            "balls": 33,
+            "out": 25
+          },
+          "9": {
+            "balls": 24,
+            "out": 10
+          }
+        }
+      }
+    },
+    "dates": [
+      "2025-10-24",
+      "2025-10-25",
+      "2025-10-27",
+      "2025-10-28",
+      "2025-10-29",
+      "2025-10-31",
+      "2025-11-01"
+    ]
+  },
+  "all": {
+    "games": 18,
+    "toronto": {
+      "pa": 714,
+      "strikeouts": 180,
+      "walks": 77,
+      "runs": 75,
+      "pitches": {
+        "0-0": {
+          "total": 702,
+          "miss": 64,
+          "called": 198,
+          "play": 79
+        },
+        "0-1": {
+          "total": 360,
+          "miss": 57,
+          "called": 34,
+          "play": 63
+        },
+        "0-2": {
+          "total": 162,
+          "miss": 23,
+          "called": 6,
+          "play": 25
+        },
+        "1-0": {
+          "total": 263,
+          "miss": 33,
+          "called": 70,
+          "play": 20
+        },
+        "1-1": {
+          "total": 300,
+          "miss": 48,
+          "called": 27,
+          "play": 58
+        },
+        "1-2": {
+          "total": 264,
+          "miss": 50,
+          "called": 6,
+          "play": 48
+        },
+        "2-0": {
+          "total": 96,
+          "miss": 9,
+          "called": 21,
+          "play": 19
+        },
+        "2-1": {
+          "total": 148,
+          "miss": 19,
+          "called": 18,
+          "play": 31
+        },
+        "2-2": {
+          "total": 251,
+          "miss": 39,
+          "called": 16,
+          "play": 51
+        },
+        "3-0": {
+          "total": 32,
+          "miss": 0,
+          "called": 19,
+          "play": 0
+        },
+        "3-1": {
+          "total": 68,
+          "miss": 5,
+          "called": 14,
+          "play": 11
+        },
+        "3-2": {
+          "total": 142,
+          "miss": 22,
+          "called": 9,
+          "play": 46
+        }
+      },
+      "fielding": {
+        "all": {
+          "1": {
+            "balls": 8,
+            "out": 8
+          },
+          "2": {
+            "balls": 5,
+            "out": 5
+          },
+          "3": {
+            "balls": 40,
+            "out": 37
+          },
+          "4": {
+            "balls": 49,
+            "out": 47
+          },
+          "5": {
+            "balls": 47,
+            "out": 42
+          },
+          "6": {
+            "balls": 42,
+            "out": 39
+          },
+          "7": {
+            "balls": 64,
+            "out": 35
+          },
+          "8": {
+            "balls": 84,
+            "out": 49
+          },
+          "9": {
+            "balls": 83,
+            "out": 54
+          }
+        },
+        "ground": {
+          "1": {
+            "balls": 7,
+            "out": 7
+          },
+          "2": {
+            "balls": 2,
+            "out": 2
+          },
+          "3": {
+            "balls": 30,
+            "out": 28
+          },
+          "4": {
+            "balls": 35,
+            "out": 33
+          },
+          "5": {
+            "balls": 27,
+            "out": 23
+          },
+          "6": {
+            "balls": 30,
+            "out": 27
+          },
+          "7": {
+            "balls": 6,
+            "out": 0
+          },
+          "8": {
+            "balls": 15,
+            "out": 0
+          },
+          "9": {
+            "balls": 12,
+            "out": 2
+          }
+        },
+        "air": {
+          "1": {
+            "balls": 1,
+            "out": 1
+          },
+          "2": {
+            "balls": 3,
+            "out": 3
+          },
+          "3": {
+            "balls": 10,
+            "out": 9
+          },
+          "4": {
+            "balls": 14,
+            "out": 14
+          },
+          "5": {
+            "balls": 20,
+            "out": 19
+          },
+          "6": {
+            "balls": 12,
+            "out": 12
+          },
+          "7": {
+            "balls": 58,
+            "out": 35
+          },
+          "8": {
+            "balls": 69,
+            "out": 49
+          },
+          "9": {
+            "balls": 71,
+            "out": 52
+          }
+        }
+      }
+    },
+    "opponents": {
+      "pa": 750,
+      "strikeouts": 128,
+      "walks": 61,
+      "runs": 105,
+      "pitches": {
+        "0-0": {
+          "total": 743,
+          "miss": 66,
+          "called": 189,
+          "play": 102
+        },
+        "0-1": {
+          "total": 361,
+          "miss": 38,
+          "called": 22,
+          "play": 81
+        },
+        "0-2": {
+          "total": 181,
+          "miss": 18,
+          "called": 3,
+          "play": 46
+        },
+        "1-0": {
+          "total": 276,
+          "miss": 31,
+          "called": 60,
+          "play": 56
+        },
+        "1-1": {
+          "total": 271,
+          "miss": 39,
+          "called": 29,
+          "play": 63
+        },
+        "1-2": {
+          "total": 251,
+          "miss": 32,
+          "called": 5,
+          "play": 61
+        },
+        "2-0": {
+          "total": 87,
+          "miss": 8,
+          "called": 28,
+          "play": 7
+        },
+        "2-1": {
+          "total": 140,
+          "miss": 16,
+          "called": 16,
+          "play": 28
+        },
+        "2-2": {
+          "total": 221,
+          "miss": 31,
+          "called": 7,
+          "play": 55
+        },
+        "3-0": {
+          "total": 30,
+          "miss": 0,
+          "called": 18,
+          "play": 4
+        },
+        "3-1": {
+          "total": 62,
+          "miss": 5,
+          "called": 18,
+          "play": 11
+        },
+        "3-2": {
+          "total": 131,
+          "miss": 11,
+          "called": 6,
+          "play": 36
+        }
+      },
+      "fielding": {
+        "all": {
+          "1": {
+            "balls": 27,
+            "out": 25
+          },
+          "2": {
+            "balls": 4,
+            "out": 4
+          },
+          "3": {
+            "balls": 48,
+            "out": 44
+          },
+          "4": {
+            "balls": 59,
+            "out": 55
+          },
+          "5": {
+            "balls": 50,
+            "out": 39
+          },
+          "6": {
+            "balls": 58,
+            "out": 54
+          },
+          "7": {
+            "balls": 97,
+            "out": 45
+          },
+          "8": {
+            "balls": 90,
+            "out": 55
+          },
+          "9": {
+            "balls": 89,
+            "out": 38
+          }
+        },
+        "ground": {
+          "1": {
+            "balls": 24,
+            "out": 23
+          },
+          "2": {
+            "balls": 2,
+            "out": 2
+          },
+          "3": {
+            "balls": 31,
+            "out": 28
+          },
+          "4": {
+            "balls": 49,
+            "out": 45
+          },
+          "5": {
+            "balls": 42,
+            "out": 31
+          },
+          "6": {
+            "balls": 45,
+            "out": 41
+          },
+          "7": {
+            "balls": 14,
+            "out": 0
+          },
+          "8": {
+            "balls": 10,
+            "out": 0
+          },
+          "9": {
+            "balls": 13,
+            "out": 0
+          }
+        },
+        "air": {
+          "1": {
+            "balls": 3,
+            "out": 2
+          },
+          "2": {
+            "balls": 2,
+            "out": 2
+          },
+          "3": {
+            "balls": 17,
+            "out": 16
+          },
+          "4": {
+            "balls": 10,
+            "out": 10
+          },
+          "5": {
+            "balls": 8,
+            "out": 8
+          },
+          "6": {
+            "balls": 13,
+            "out": 13
+          },
+          "7": {
+            "balls": 83,
+            "out": 45
+          },
+          "8": {
+            "balls": 80,
+            "out": 55
+          },
+          "9": {
+            "balls": 76,
+            "out": 38
+          }
+        }
+      }
+    },
+    "dates": [
+      "2025-10-04",
+      "2025-10-05",
+      "2025-10-07",
+      "2025-10-08",
+      "2025-10-12",
+      "2025-10-13",
+      "2025-10-15",
+      "2025-10-16",
+      "2025-10-17",
+      "2025-10-19",
+      "2025-10-20",
+      "2025-10-24",
+      "2025-10-25",
+      "2025-10-27",
+      "2025-10-28",
+      "2025-10-29",
+      "2025-10-31",
+      "2025-11-01"
+    ]
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "bautista": {
+    "date": "2015-10-14",
+    "game": "2015 American League Division Series, Game 5",
+    "play": "José Bautista’s go-ahead three-run home run and bat flip",
+    "publisher": "MLB",
+    "url": "https://www.mlb.com/video/bautista-fuels-blue-jays-to-alcs"
+  },
+  "springer": {
+    "date": "2025-10-20",
+    "game": "2025 American League Championship Series, Game 7",
+    "play": "George Springer’s go-ahead three-run home run against Seattle",
+    "publisher": "MLB",
+    "url": "https://www.mlb.com/video/george-springer-homers-4-on-a-fly-ball-to-left-center-field-addison-barge/"
+  },
+  "barger": {
+    "date": "2025-10-24",
+    "game": "2025 World Series, Game 1",
+    "play": "Addison Barger’s sixth-inning pinch-hit grand slam against Los Angeles",
+    "publisher": "MLB",
+    "url": "https://www.mlb.com/bluejays/video/addison-barger-hits-a-grand-slam-3-to-center-field-nathan-lukes-scores-an"
+  },
+  "kiner_falefa": {
+    "date": "2025-11-01",
+    "game": "2025 World Series, Game 7",
+    "play": "Isiah Kiner-Falefa’s eleventh-inning sacrifice bunt advancing Vladimir Guerrero Jr. to third",
+    "publisher": "MLB Baseball Savant",
+    "url": "https://baseballsavant.mlb.com/sporty-videos?playId=8c5c0c39-5e5c-3407-b8e4-56170ebdec38"
+  }
+}

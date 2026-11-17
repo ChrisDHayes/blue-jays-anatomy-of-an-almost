@@ -1,0 +1,1382 @@
+{
+  "players": [
+    {
+      "name": "Addison Barger",
+      "id": "barga001",
+      "pa": 502,
+      "ab": 460,
+      "projectedPA": 218.0,
+      "actual": 0.45435,
+      "guru": 0.363,
+      "tbSurplus": 42.02,
+      "re24": 1.12,
+      "rePer100": 0.223,
+      "wpaModel": 1.6999,
+      "zips": 0.417,
+      "zipsPA": 490.0,
+      "steamer": 0.404,
+      "steamerPA": 95.0
+    },
+    {
+      "name": "Alejandro Kirk",
+      "id": "kirka001",
+      "pa": 506,
+      "ab": 451,
+      "projectedPA": 418.0,
+      "actual": 0.42129,
+      "guru": 0.385,
+      "tbSurplus": 16.37,
+      "re24": 5.421,
+      "rePer100": 1.071,
+      "wpaModel": 3.5791,
+      "zips": 0.394,
+      "zipsPA": 430.0,
+      "steamer": 0.419,
+      "steamerPA": 417.0
+    },
+    {
+      "name": "Ali Sánchez",
+      "id": "sanca009",
+      "pa": 21,
+      "ab": 21,
+      "projectedPA": 119.0,
+      "actual": 0.33333,
+      "guru": 0.251,
+      "tbSurplus": 1.73,
+      "re24": -2.761,
+      "rePer100": -13.149,
+      "wpaModel": -0.2395
+    },
+    {
+      "name": "Andrés Giménez",
+      "id": "gimea001",
+      "pa": 369,
+      "ab": 329,
+      "projectedPA": 549.0,
+      "actual": 0.31307,
+      "guru": 0.395,
+      "tbSurplus": -26.96,
+      "re24": -10.14,
+      "rePer100": -2.748,
+      "wpaModel": 1.1331
+    },
+    {
+      "name": "Anthony Santander",
+      "id": "santa003",
+      "pa": 221,
+      "ab": 194,
+      "projectedPA": 508.0,
+      "actual": 0.29381,
+      "guru": 0.501,
+      "tbSurplus": -40.19,
+      "re24": -15.402,
+      "rePer100": -6.969,
+      "wpaModel": -0.6828
+    },
+    {
+      "name": "Bo Bichette",
+      "id": "bichb001",
+      "pa": 628,
+      "ab": 582,
+      "projectedPA": 432.0,
+      "actual": 0.48282,
+      "guru": 0.394,
+      "tbSurplus": 51.69,
+      "re24": 28.024,
+      "rePer100": 4.462,
+      "wpaModel": 6.1402,
+      "zips": 0.444,
+      "zipsPA": 552.0,
+      "steamer": 0.446,
+      "steamerPA": 592.0
+    },
+    {
+      "name": "Daulton Varsho",
+      "id": "varsd001",
+      "pa": 271,
+      "ab": 248,
+      "projectedPA": 432.0,
+      "actual": 0.54839,
+      "guru": 0.448,
+      "tbSurplus": 24.9,
+      "re24": 11.519,
+      "rePer100": 4.251,
+      "wpaModel": 1.1514,
+      "zips": 0.432,
+      "zipsPA": 533.0,
+      "steamer": 0.413,
+      "steamerPA": 483.0
+    },
+    {
+      "name": "Davis Schneider",
+      "id": "schnd001",
+      "pa": 227,
+      "ab": 188,
+      "projectedPA": 332.0,
+      "actual": 0.43617,
+      "guru": 0.402,
+      "tbSurplus": 6.42,
+      "re24": 5.244,
+      "rePer100": 2.31,
+      "wpaModel": 0.3912
+    },
+    {
+      "name": "Ernie Clement",
+      "id": "cleme002",
+      "pa": 588,
+      "ab": 545,
+      "projectedPA": 337.0,
+      "actual": 0.39817,
+      "guru": 0.378,
+      "tbSurplus": 10.99,
+      "re24": -14.981,
+      "rePer100": -2.548,
+      "wpaModel": 0.8543,
+      "zips": 0.395,
+      "zipsPA": 401.0,
+      "steamer": 0.411,
+      "steamerPA": 323.0
+    },
+    {
+      "name": "George Springer",
+      "id": "sprig001",
+      "pa": 586,
+      "ab": 498,
+      "projectedPA": 426.0,
+      "actual": 0.56024,
+      "guru": 0.406,
+      "tbSurplus": 76.81,
+      "re24": 38.123,
+      "rePer100": 6.506,
+      "wpaModel": 4.5601,
+      "zips": 0.396,
+      "zipsPA": 553.0,
+      "steamer": 0.416,
+      "steamerPA": 561.0
+    },
+    {
+      "name": "Isiah Kiner-Falefa",
+      "id": "kinei001",
+      "pa": 31,
+      "ab": 30,
+      "projectedPA": 383.0,
+      "actual": 0.36667,
+      "guru": 0.345,
+      "tbSurplus": 0.65,
+      "re24": -0.342,
+      "rePer100": -1.105,
+      "wpaModel": 0.1361
+    },
+    {
+      "name": "Joey Loperfido",
+      "id": "lopej008",
+      "pa": 104,
+      "ab": 96,
+      "projectedPA": 227.0,
+      "actual": 0.5,
+      "guru": 0.342,
+      "tbSurplus": 15.17,
+      "re24": 6.353,
+      "rePer100": 6.109,
+      "wpaModel": 0.495
+    },
+    {
+      "name": "Jonatan Clase",
+      "id": "clasj001",
+      "pa": 112,
+      "ab": 100,
+      "projectedPA": 173.0,
+      "actual": 0.3,
+      "guru": 0.313,
+      "tbSurplus": -1.3,
+      "re24": -3.787,
+      "rePer100": -3.381,
+      "wpaModel": 0.348
+    },
+    {
+      "name": "Leo Jiménez",
+      "id": "jimel003",
+      "pa": 32,
+      "ab": 29,
+      "projectedPA": 240.0,
+      "actual": 0.17241,
+      "guru": 0.347,
+      "tbSurplus": -5.06,
+      "re24": -4.199,
+      "rePer100": -13.121,
+      "wpaModel": -0.3112
+    },
+    {
+      "name": "Michael Stefanic",
+      "id": "stefm001",
+      "pa": 25,
+      "ab": 22,
+      "projectedPA": 150.0,
+      "actual": 0.18182,
+      "guru": 0.284,
+      "tbSurplus": -2.25,
+      "re24": -2.939,
+      "rePer100": -11.757,
+      "wpaModel": -0.4038
+    },
+    {
+      "name": "Myles Straw",
+      "id": "stram002",
+      "pa": 299,
+      "ab": 267,
+      "projectedPA": 214.0,
+      "actual": 0.36704,
+      "guru": 0.314,
+      "tbSurplus": 14.16,
+      "re24": -6.3,
+      "rePer100": -2.107,
+      "wpaModel": 0.8196
+    },
+    {
+      "name": "Nathan Lukes",
+      "id": "luken001",
+      "pa": 438,
+      "ab": 388,
+      "projectedPA": 135.0,
+      "actual": 0.40722,
+      "guru": 0.346,
+      "tbSurplus": 23.75,
+      "re24": 5.567,
+      "rePer100": 1.271,
+      "wpaModel": 1.8216
+    },
+    {
+      "name": "Ty France",
+      "id": "frant002",
+      "pa": 103,
+      "ab": 94,
+      "projectedPA": 461.0,
+      "actual": 0.37234,
+      "guru": 0.393,
+      "tbSurplus": -1.94,
+      "re24": -1.582,
+      "rePer100": -1.536,
+      "wpaModel": -0.0377
+    },
+    {
+      "name": "Tyler Heineman",
+      "id": "heint001",
+      "pa": 174,
+      "ab": 149,
+      "projectedPA": 93.0,
+      "actual": 0.41611,
+      "guru": 0.296,
+      "tbSurplus": 17.9,
+      "re24": 3.695,
+      "rePer100": 2.124,
+      "wpaModel": 1.5709
+    },
+    {
+      "name": "Vladimir Guerrero Jr.",
+      "id": "guerv002",
+      "pa": 680,
+      "ab": 589,
+      "projectedPA": 631.0,
+      "actual": 0.46689,
+      "guru": 0.475,
+      "tbSurplus": -4.77,
+      "re24": 33.836,
+      "rePer100": 4.976,
+      "wpaModel": 3.9415,
+      "zips": 0.5,
+      "zipsPA": 657.0,
+      "steamer": 0.535,
+      "steamerPA": 641.0
+    },
+    {
+      "name": "Will Wagner",
+      "id": "wagnw001",
+      "pa": 132,
+      "ab": 114,
+      "projectedPA": 187.0,
+      "actual": 0.29825,
+      "guru": 0.372,
+      "tbSurplus": -8.41,
+      "re24": -3.001,
+      "rePer100": -2.274,
+      "wpaModel": -0.0978
+    }
+  ],
+  "events": [
+    {
+      "pn": 24,
+      "inning": "Bottom 3rd",
+      "title": "Bichette changes everything",
+      "description": "Bo Bichette hits a three-run homer. Toronto moves ahead 3–0.",
+      "meaning": "The first explosion of belief.",
+      "team": "TOR",
+      "preTor": 0,
+      "preLad": 0,
+      "afterTor": 3,
+      "afterLad": 0,
+      "outs": 1,
+      "bases": 5,
+      "runRE24": 2.051,
+      "wpaAfter": 0.8632
+    },
+    {
+      "pn": 68,
+      "inning": "Top 8th",
+      "title": "Muncy closes the gap",
+      "description": "Max Muncy hits a solo home run. Toronto still leads 4–3.",
+      "meaning": "The lead narrows to one run.",
+      "team": "LAN",
+      "preTor": 4,
+      "preLad": 2,
+      "afterTor": 4,
+      "afterLad": 3,
+      "outs": 1,
+      "bases": 0,
+      "runRE24": null,
+      "wpaAfter": 0.8559
+    },
+    {
+      "pn": 76,
+      "inning": "Top 9th",
+      "title": "Rojas ties it",
+      "description": "Miguel Rojas homers with one out. The score becomes 4–4.",
+      "meaning": "The championship is no longer one inning away.",
+      "team": "LAN",
+      "preTor": 4,
+      "preLad": 3,
+      "afterTor": 4,
+      "afterLad": 4,
+      "outs": 1,
+      "bases": 0,
+      "runRE24": null,
+      "wpaAfter": 0.5701
+    },
+    {
+      "pn": 96,
+      "inning": "Top 11th",
+      "title": "Smith puts Los Angeles ahead",
+      "description": "Will Smith hits a two-out solo home run. Los Angeles leads 5–4.",
+      "meaning": "Toronto has one final chance.",
+      "team": "LAN",
+      "preTor": 4,
+      "preLad": 4,
+      "afterTor": 4,
+      "afterLad": 5,
+      "outs": 2,
+      "bases": 0,
+      "runRE24": null,
+      "wpaAfter": 0.3326
+    },
+    {
+      "pn": 98,
+      "inning": "Bottom 11th",
+      "title": "Guerrero doubles",
+      "description": "Vladimir Guerrero Jr. leads off the bottom of the 11th with a double.",
+      "meaning": "The tying run reaches scoring position.",
+      "team": "TOR",
+      "preTor": 4,
+      "preLad": 5,
+      "afterTor": 4,
+      "afterLad": 5,
+      "outs": 0,
+      "bases": 0,
+      "runRE24": 0.611,
+      "wpaAfter": 0.4692
+    },
+    {
+      "pn": 99,
+      "inning": "Bottom 11th",
+      "title": "Kiner-Falefa sacrifices",
+      "description": "Isiah Kiner-Falefa bunts Guerrero to third; one out.",
+      "meaning": "Empirical RE24 decreases for the batting team.",
+      "team": "TOR",
+      "preTor": 4,
+      "preLad": 5,
+      "afterTor": 4,
+      "afterLad": 5,
+      "outs": 0,
+      "bases": 2,
+      "runRE24": -0.222,
+      "wpaAfter": 0.3612
+    },
+    {
+      "pn": 100,
+      "inning": "Bottom 11th",
+      "title": "Barger walks",
+      "description": "Addison Barger walks. Runners are on first and third with one out.",
+      "meaning": "A possible winning run reaches first.",
+      "team": "TOR",
+      "preTor": 4,
+      "preLad": 5,
+      "afterTor": 4,
+      "afterLad": 5,
+      "outs": 1,
+      "bases": 4,
+      "runRE24": 0.33,
+      "wpaAfter": 0.5467
+    },
+    {
+      "pn": 101,
+      "inning": "Bottom 11th",
+      "title": "The final double play",
+      "description": "Alejandro Kirk grounds into a 6–3 double play. The game ends.",
+      "meaning": "One outcome from countless possible futures.",
+      "team": "TOR",
+      "preTor": 4,
+      "preLad": 5,
+      "afterTor": 4,
+      "afterLad": 5,
+      "outs": 1,
+      "bases": 5,
+      "runRE24": -1.213,
+      "wpaAfter": 0.0
+    }
+  ],
+  "winprob": [
+    {
+      "pn": 1,
+      "inning": 1,
+      "half": "Top",
+      "prob": 0.491117,
+      "before": 0.544525,
+      "tor": 0,
+      "lad": 0
+    },
+    {
+      "pn": 2,
+      "inning": 1,
+      "half": "Top",
+      "prob": 0.54056,
+      "before": 0.491117,
+      "tor": 0,
+      "lad": 0
+    },
+    {
+      "pn": 3,
+      "inning": 1,
+      "half": "Top",
+      "prob": 0.570975,
+      "before": 0.54056,
+      "tor": 0,
+      "lad": 0
+    },
+    {
+      "pn": 4,
+      "inning": 1,
+      "half": "Top",
+      "prob": 0.596384,
+      "before": 0.570975,
+      "tor": 0,
+      "lad": 0
+    },
+    {
+      "pn": 5,
+      "inning": 1,
+      "half": "Bottom",
+      "prob": 0.646311,
+      "before": 0.596384,
+      "tor": 0,
+      "lad": 0
+    },
+    {
+      "pn": 6,
+      "inning": 1,
+      "half": "Bottom",
+      "prob": 0.604736,
+      "before": 0.646311,
+      "tor": 0,
+      "lad": 0
+    },
+    {
+      "pn": 7,
+      "inning": 1,
+      "half": "Bottom",
+      "prob": 0.544525,
+      "before": 0.604736,
+      "tor": 0,
+      "lad": 0
+    },
+    {
+      "pn": 8,
+      "inning": 2,
+      "half": "Top",
+      "prob": 0.567284,
+      "before": 0.544525,
+      "tor": 0,
+      "lad": 0
+    },
+    {
+      "pn": 9,
+      "inning": 2,
+      "half": "Top",
+      "prob": 0.578156,
+      "before": 0.567284,
+      "tor": 0,
+      "lad": 0
+    },
+    {
+      "pn": 10,
+      "inning": 2,
+      "half": "Top",
+      "prob": 0.596384,
+      "before": 0.578156,
+      "tor": 0,
+      "lad": 0
+    },
+    {
+      "pn": 11,
+      "inning": 2,
+      "half": "Bottom",
+      "prob": 0.646311,
+      "before": 0.596384,
+      "tor": 0,
+      "lad": 0
+    },
+    {
+      "pn": 12,
+      "inning": 2,
+      "half": "Bottom",
+      "prob": 0.709399,
+      "before": 0.646311,
+      "tor": 0,
+      "lad": 0
+    },
+    {
+      "pn": 13,
+      "inning": 2,
+      "half": "Bottom",
+      "prob": 0.660985,
+      "before": 0.709399,
+      "tor": 0,
+      "lad": 0
+    },
+    {
+      "pn": 14,
+      "inning": 2,
+      "half": "Bottom",
+      "prob": 0.588888,
+      "before": 0.660985,
+      "tor": 0,
+      "lad": 0
+    },
+    {
+      "pn": 15,
+      "inning": 2,
+      "half": "Bottom",
+      "prob": 0.613081,
+      "before": 0.588888,
+      "tor": 0,
+      "lad": 0
+    },
+    {
+      "pn": 16,
+      "inning": 2,
+      "half": "Bottom",
+      "prob": 0.544525,
+      "before": 0.613081,
+      "tor": 0,
+      "lad": 0
+    },
+    {
+      "pn": 17,
+      "inning": 3,
+      "half": "Top",
+      "prob": 0.567284,
+      "before": 0.544525,
+      "tor": 0,
+      "lad": 0
+    },
+    {
+      "pn": 18,
+      "inning": 3,
+      "half": "Top",
+      "prob": 0.578156,
+      "before": 0.567284,
+      "tor": 0,
+      "lad": 0
+    },
+    {
+      "pn": 19,
+      "inning": 3,
+      "half": "Top",
+      "prob": 0.596384,
+      "before": 0.578156,
+      "tor": 0,
+      "lad": 0
+    },
+    {
+      "pn": 20,
+      "inning": 3,
+      "half": "Bottom",
+      "prob": 0.650955,
+      "before": 0.596384,
+      "tor": 0,
+      "lad": 0
+    },
+    {
+      "pn": 21,
+      "inning": 3,
+      "half": "Bottom",
+      "prob": 0.621259,
+      "before": 0.650955,
+      "tor": 0,
+      "lad": 0
+    },
+    {
+      "pn": 22,
+      "inning": 3,
+      "half": "Bottom",
+      "prob": 0.628875,
+      "before": 0.621259,
+      "tor": 0,
+      "lad": 0
+    },
+    {
+      "pn": 23,
+      "inning": 3,
+      "half": "Bottom",
+      "prob": 0.688302,
+      "before": 0.628875,
+      "tor": 0,
+      "lad": 0
+    },
+    {
+      "pn": 24,
+      "inning": 3,
+      "half": "Bottom",
+      "prob": 0.863188,
+      "before": 0.688302,
+      "tor": 0,
+      "lad": 0
+    },
+    {
+      "pn": 25,
+      "inning": 3,
+      "half": "Bottom",
+      "prob": 0.879093,
+      "before": 0.863188,
+      "tor": 3,
+      "lad": 0
+    },
+    {
+      "pn": 26,
+      "inning": 3,
+      "half": "Bottom",
+      "prob": 0.863374,
+      "before": 0.879093,
+      "tor": 3,
+      "lad": 0
+    },
+    {
+      "pn": 27,
+      "inning": 3,
+      "half": "Bottom",
+      "prob": 0.853091,
+      "before": 0.863374,
+      "tor": 3,
+      "lad": 0
+    },
+    {
+      "pn": 28,
+      "inning": 4,
+      "half": "Top",
+      "prob": 0.756628,
+      "before": 0.853091,
+      "tor": 3,
+      "lad": 0
+    },
+    {
+      "pn": 29,
+      "inning": 4,
+      "half": "Top",
+      "prob": 0.684099,
+      "before": 0.756628,
+      "tor": 3,
+      "lad": 0
+    },
+    {
+      "pn": 30,
+      "inning": 4,
+      "half": "Top",
+      "prob": 0.762904,
+      "before": 0.684099,
+      "tor": 3,
+      "lad": 0
+    },
+    {
+      "pn": 31,
+      "inning": 4,
+      "half": "Top",
+      "prob": 0.745513,
+      "before": 0.762904,
+      "tor": 3,
+      "lad": 0
+    },
+    {
+      "pn": 32,
+      "inning": 4,
+      "half": "Top",
+      "prob": 0.777204,
+      "before": 0.745513,
+      "tor": 3,
+      "lad": 0
+    },
+    {
+      "pn": 33,
+      "inning": 4,
+      "half": "Top",
+      "prob": 0.818531,
+      "before": 0.777204,
+      "tor": 3,
+      "lad": 1
+    },
+    {
+      "pn": 34,
+      "inning": 4,
+      "half": "Bottom",
+      "prob": 0.813873,
+      "before": 0.818531,
+      "tor": 3,
+      "lad": 1
+    },
+    {
+      "pn": 35,
+      "inning": 4,
+      "half": "Bottom",
+      "prob": 0.828256,
+      "before": 0.813873,
+      "tor": 3,
+      "lad": 1
+    },
+    {
+      "pn": 36,
+      "inning": 4,
+      "half": "Bottom",
+      "prob": 0.834784,
+      "before": 0.828256,
+      "tor": 3,
+      "lad": 1
+    },
+    {
+      "pn": 37,
+      "inning": 4,
+      "half": "Bottom",
+      "prob": 0.827213,
+      "before": 0.834784,
+      "tor": 3,
+      "lad": 1
+    },
+    {
+      "pn": 38,
+      "inning": 4,
+      "half": "Bottom",
+      "prob": 0.802583,
+      "before": 0.827213,
+      "tor": 3,
+      "lad": 1
+    },
+    {
+      "pn": 39,
+      "inning": 5,
+      "half": "Top",
+      "prob": 0.819578,
+      "before": 0.802583,
+      "tor": 3,
+      "lad": 1
+    },
+    {
+      "pn": 40,
+      "inning": 5,
+      "half": "Top",
+      "prob": 0.806429,
+      "before": 0.819578,
+      "tor": 3,
+      "lad": 1
+    },
+    {
+      "pn": 41,
+      "inning": 5,
+      "half": "Top",
+      "prob": 0.758716,
+      "before": 0.806429,
+      "tor": 3,
+      "lad": 1
+    },
+    {
+      "pn": 42,
+      "inning": 5,
+      "half": "Top",
+      "prob": 0.807424,
+      "before": 0.758716,
+      "tor": 3,
+      "lad": 1
+    },
+    {
+      "pn": 43,
+      "inning": 5,
+      "half": "Top",
+      "prob": 0.85889,
+      "before": 0.807424,
+      "tor": 3,
+      "lad": 1
+    },
+    {
+      "pn": 44,
+      "inning": 5,
+      "half": "Bottom",
+      "prob": 0.855085,
+      "before": 0.85889,
+      "tor": 3,
+      "lad": 1
+    },
+    {
+      "pn": 45,
+      "inning": 5,
+      "half": "Bottom",
+      "prob": 0.847758,
+      "before": 0.855085,
+      "tor": 3,
+      "lad": 1
+    },
+    {
+      "pn": 46,
+      "inning": 5,
+      "half": "Bottom",
+      "prob": 0.856472,
+      "before": 0.847758,
+      "tor": 3,
+      "lad": 1
+    },
+    {
+      "pn": 47,
+      "inning": 5,
+      "half": "Bottom",
+      "prob": 0.850207,
+      "before": 0.856472,
+      "tor": 3,
+      "lad": 1
+    },
+    {
+      "pn": 48,
+      "inning": 6,
+      "half": "Top",
+      "prob": 0.782194,
+      "before": 0.850207,
+      "tor": 3,
+      "lad": 1
+    },
+    {
+      "pn": 49,
+      "inning": 6,
+      "half": "Top",
+      "prob": 0.6961,
+      "before": 0.782194,
+      "tor": 3,
+      "lad": 1
+    },
+    {
+      "pn": 50,
+      "inning": 6,
+      "half": "Top",
+      "prob": 0.744108,
+      "before": 0.6961,
+      "tor": 3,
+      "lad": 1
+    },
+    {
+      "pn": 51,
+      "inning": 6,
+      "half": "Top",
+      "prob": 0.720821,
+      "before": 0.744108,
+      "tor": 3,
+      "lad": 1
+    },
+    {
+      "pn": 52,
+      "inning": 6,
+      "half": "Top",
+      "prob": 0.67178,
+      "before": 0.720821,
+      "tor": 3,
+      "lad": 2
+    },
+    {
+      "pn": 53,
+      "inning": 6,
+      "half": "Top",
+      "prob": 0.765191,
+      "before": 0.67178,
+      "tor": 3,
+      "lad": 2
+    },
+    {
+      "pn": 54,
+      "inning": 6,
+      "half": "Bottom",
+      "prob": 0.808601,
+      "before": 0.765191,
+      "tor": 3,
+      "lad": 2
+    },
+    {
+      "pn": 55,
+      "inning": 6,
+      "half": "Bottom",
+      "prob": 0.810823,
+      "before": 0.808601,
+      "tor": 3,
+      "lad": 2
+    },
+    {
+      "pn": 56,
+      "inning": 6,
+      "half": "Bottom",
+      "prob": 0.915006,
+      "before": 0.810823,
+      "tor": 3,
+      "lad": 2
+    },
+    {
+      "pn": 57,
+      "inning": 6,
+      "half": "Bottom",
+      "prob": 0.912085,
+      "before": 0.915006,
+      "tor": 4,
+      "lad": 2
+    },
+    {
+      "pn": 58,
+      "inning": 6,
+      "half": "Bottom",
+      "prob": 0.903355,
+      "before": 0.912085,
+      "tor": 4,
+      "lad": 2
+    },
+    {
+      "pn": 59,
+      "inning": 6,
+      "half": "Bottom",
+      "prob": 0.892349,
+      "before": 0.903355,
+      "tor": 4,
+      "lad": 2
+    },
+    {
+      "pn": 60,
+      "inning": 7,
+      "half": "Top",
+      "prob": 0.830277,
+      "before": 0.892349,
+      "tor": 4,
+      "lad": 2
+    },
+    {
+      "pn": 61,
+      "inning": 7,
+      "half": "Top",
+      "prob": 0.906617,
+      "before": 0.830277,
+      "tor": 4,
+      "lad": 2
+    },
+    {
+      "pn": 62,
+      "inning": 7,
+      "half": "Top",
+      "prob": 0.932366,
+      "before": 0.906617,
+      "tor": 4,
+      "lad": 2
+    },
+    {
+      "pn": 63,
+      "inning": 7,
+      "half": "Bottom",
+      "prob": 0.930241,
+      "before": 0.932366,
+      "tor": 4,
+      "lad": 2
+    },
+    {
+      "pn": 64,
+      "inning": 7,
+      "half": "Bottom",
+      "prob": 0.920211,
+      "before": 0.930241,
+      "tor": 4,
+      "lad": 2
+    },
+    {
+      "pn": 65,
+      "inning": 7,
+      "half": "Bottom",
+      "prob": 0.925069,
+      "before": 0.920211,
+      "tor": 4,
+      "lad": 2
+    },
+    {
+      "pn": 66,
+      "inning": 7,
+      "half": "Bottom",
+      "prob": 0.913429,
+      "before": 0.925069,
+      "tor": 4,
+      "lad": 2
+    },
+    {
+      "pn": 67,
+      "inning": 8,
+      "half": "Top",
+      "prob": 0.936869,
+      "before": 0.913429,
+      "tor": 4,
+      "lad": 2
+    },
+    {
+      "pn": 68,
+      "inning": 8,
+      "half": "Top",
+      "prob": 0.855868,
+      "before": 0.936869,
+      "tor": 4,
+      "lad": 2
+    },
+    {
+      "pn": 69,
+      "inning": 8,
+      "half": "Top",
+      "prob": 0.864713,
+      "before": 0.855868,
+      "tor": 4,
+      "lad": 3
+    },
+    {
+      "pn": 70,
+      "inning": 8,
+      "half": "Top",
+      "prob": 0.893094,
+      "before": 0.864713,
+      "tor": 4,
+      "lad": 3
+    },
+    {
+      "pn": 71,
+      "inning": 8,
+      "half": "Bottom",
+      "prob": 0.91384,
+      "before": 0.893094,
+      "tor": 4,
+      "lad": 3
+    },
+    {
+      "pn": 72,
+      "inning": 8,
+      "half": "Bottom",
+      "prob": 0.911586,
+      "before": 0.91384,
+      "tor": 4,
+      "lad": 3
+    },
+    {
+      "pn": 73,
+      "inning": 8,
+      "half": "Bottom",
+      "prob": 0.892934,
+      "before": 0.911586,
+      "tor": 4,
+      "lad": 3
+    },
+    {
+      "pn": 74,
+      "inning": 8,
+      "half": "Bottom",
+      "prob": 0.891244,
+      "before": 0.892934,
+      "tor": 4,
+      "lad": 3
+    },
+    {
+      "pn": 75,
+      "inning": 9,
+      "half": "Top",
+      "prob": 0.920348,
+      "before": 0.891244,
+      "tor": 4,
+      "lad": 3
+    },
+    {
+      "pn": 76,
+      "inning": 9,
+      "half": "Top",
+      "prob": 0.570077,
+      "before": 0.920348,
+      "tor": 4,
+      "lad": 3
+    },
+    {
+      "pn": 77,
+      "inning": 9,
+      "half": "Top",
+      "prob": 0.619397,
+      "before": 0.570077,
+      "tor": 4,
+      "lad": 4
+    },
+    {
+      "pn": 78,
+      "inning": 9,
+      "half": "Top",
+      "prob": 0.629579,
+      "before": 0.619397,
+      "tor": 4,
+      "lad": 4
+    },
+    {
+      "pn": 79,
+      "inning": 9,
+      "half": "Bottom",
+      "prob": 0.612991,
+      "before": 0.629579,
+      "tor": 4,
+      "lad": 4
+    },
+    {
+      "pn": 80,
+      "inning": 9,
+      "half": "Bottom",
+      "prob": 0.668043,
+      "before": 0.612991,
+      "tor": 4,
+      "lad": 4
+    },
+    {
+      "pn": 81,
+      "inning": 9,
+      "half": "Bottom",
+      "prob": 0.70947,
+      "before": 0.668043,
+      "tor": 4,
+      "lad": 4
+    },
+    {
+      "pn": 82,
+      "inning": 9,
+      "half": "Bottom",
+      "prob": 0.775915,
+      "before": 0.70947,
+      "tor": 4,
+      "lad": 4
+    },
+    {
+      "pn": 83,
+      "inning": 9,
+      "half": "Bottom",
+      "prob": 0.619307,
+      "before": 0.775915,
+      "tor": 4,
+      "lad": 4
+    },
+    {
+      "pn": 84,
+      "inning": 9,
+      "half": "Bottom",
+      "prob": 0.607854,
+      "before": 0.619307,
+      "tor": 4,
+      "lad": 4
+    },
+    {
+      "pn": 85,
+      "inning": 10,
+      "half": "Top",
+      "prob": 0.641434,
+      "before": 0.607854,
+      "tor": 4,
+      "lad": 4
+    },
+    {
+      "pn": 86,
+      "inning": 10,
+      "half": "Top",
+      "prob": 0.634911,
+      "before": 0.641434,
+      "tor": 4,
+      "lad": 4
+    },
+    {
+      "pn": 87,
+      "inning": 10,
+      "half": "Top",
+      "prob": 0.560978,
+      "before": 0.634911,
+      "tor": 4,
+      "lad": 4
+    },
+    {
+      "pn": 88,
+      "inning": 10,
+      "half": "Top",
+      "prob": 0.461254,
+      "before": 0.560978,
+      "tor": 4,
+      "lad": 4
+    },
+    {
+      "pn": 89,
+      "inning": 10,
+      "half": "Top",
+      "prob": 0.626752,
+      "before": 0.461254,
+      "tor": 4,
+      "lad": 4
+    },
+    {
+      "pn": 90,
+      "inning": 10,
+      "half": "Top",
+      "prob": 0.680994,
+      "before": 0.626752,
+      "tor": 4,
+      "lad": 4
+    },
+    {
+      "pn": 91,
+      "inning": 10,
+      "half": "Bottom",
+      "prob": 0.673907,
+      "before": 0.680994,
+      "tor": 4,
+      "lad": 4
+    },
+    {
+      "pn": 92,
+      "inning": 10,
+      "half": "Bottom",
+      "prob": 0.631344,
+      "before": 0.673907,
+      "tor": 4,
+      "lad": 4
+    },
+    {
+      "pn": 93,
+      "inning": 10,
+      "half": "Bottom",
+      "prob": 0.607854,
+      "before": 0.631344,
+      "tor": 4,
+      "lad": 4
+    },
+    {
+      "pn": 94,
+      "inning": 11,
+      "half": "Top",
+      "prob": 0.641434,
+      "before": 0.607854,
+      "tor": 4,
+      "lad": 4
+    },
+    {
+      "pn": 95,
+      "inning": 11,
+      "half": "Top",
+      "prob": 0.684509,
+      "before": 0.641434,
+      "tor": 4,
+      "lad": 4
+    },
+    {
+      "pn": 96,
+      "inning": 11,
+      "half": "Top",
+      "prob": 0.332584,
+      "before": 0.684509,
+      "tor": 4,
+      "lad": 4
+    },
+    {
+      "pn": 97,
+      "inning": 11,
+      "half": "Top",
+      "prob": 0.293949,
+      "before": 0.332584,
+      "tor": 4,
+      "lad": 5
+    },
+    {
+      "pn": 98,
+      "inning": 11,
+      "half": "Bottom",
+      "prob": 0.469173,
+      "before": 0.293949,
+      "tor": 4,
+      "lad": 5
+    },
+    {
+      "pn": 99,
+      "inning": 11,
+      "half": "Bottom",
+      "prob": 0.361188,
+      "before": 0.469173,
+      "tor": 4,
+      "lad": 5
+    },
+    {
+      "pn": 100,
+      "inning": 11,
+      "half": "Bottom",
+      "prob": 0.546674,
+      "before": 0.361188,
+      "tor": 4,
+      "lad": 5
+    },
+    {
+      "pn": 101,
+      "inning": 11,
+      "half": "Bottom",
+      "prob": 0.0,
+      "before": 0.546674,
+      "tor": 4,
+      "lad": 5
+    }
+  ],
+  "innings": {
+    "lad": [
+      0,
+      0,
+      0,
+      1,
+      0,
+      1,
+      0,
+      1,
+      1,
+      0,
+      1
+    ],
+    "tor": [
+      0,
+      0,
+      3,
+      0,
+      0,
+      1,
+      0,
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  "sources": {
+    "guru": "https://baseballguru.com/GURU_mForecast2025.xlsm",
+    "retrosheet": "https://www.retrosheet.org/downloads/plays.html",
+    "whiffs": "https://whiffs.lastplayerpicked.com/seasons/2025/",
+    "mlb": "https://www.mlb.com/video/game/813024",
+    "baseballReference": "https://www.baseball-reference.com/boxes/TOR/TOR202511010.shtml"
+  },
+  "modelNote": "Win probabilities come from an exploratory 2025 regular-season-trained model extrapolated to postseason game states. No postseason calibration or confidence intervals have been established. Do not interpret as official MLB win probability."
+}

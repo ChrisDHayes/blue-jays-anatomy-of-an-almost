@@ -1,0 +1,40 @@
+{
+  "date": "2015-10-14",
+  "game": "ALDS Game 5",
+  "venue": "Rogers Centre",
+  "innings": {
+    "tor": [0, 0, 1, 0, 0, 1, 4, 0, null],
+    "tex": [1, 0, 1, 0, 0, 0, 1, 0, 0]
+  },
+  "seventh": [
+    {
+      "id": "odor",
+      "half": "Top of the seventh",
+      "title": "Texas takes the lead",
+      "description": "Russell Martin’s throw back to the pitcher deflects off Shin-Soo Choo’s hand. The umpires allow Rougned Odor’s run from third.",
+      "tor": 0,
+      "tex": 1
+    },
+    {
+      "id": "donaldson",
+      "half": "Bottom of the seventh",
+      "title": "Donaldson brings Toronto level",
+      "description": "Three consecutive Texas errors help load the bases. Kevin Pillar scores from third when Donaldson’s fly drops in and Texas gets a force at second.",
+      "tor": 1,
+      "tex": 0
+    },
+    {
+      "id": "bautista",
+      "half": "Bottom of the seventh",
+      "title": "Bautista’s three-run homer",
+      "description": "With two outs and two men on, José Bautista takes Sam Dyson deep. Toronto goes ahead for good, 6–3.",
+      "tor": 3,
+      "tex": 0
+    }
+  ],
+  "sources": {
+    "line_score": "https://www.baseball-almanac.com/box-scores/boxscore.php?boxid=201510140TOR",
+    "seventh_inning": "https://www.mlb.com/news/blue-jays-ride-wild-seventh-past-rangers-c154473866",
+    "clip": "https://www.mlb.com/video/bautista-fuels-blue-jays-to-alcs"
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "status": "PASS",
+  "source_archive": "2025plays(1).zip",
+  "source_archive_sha256": "ea7f4be3464825b332ed6f8c19e15310858458ea9eddf3e91a954e5b47f69d73",
+  "mlb_total_plays": 193767,
+  "mlb_games_total": 2478,
+  "mlb_game_types": {
+    "regular": 2430,
+    "allstar": 1,
+    "wildcard": 11,
+    "divisionseries": 18,
+    "lcs": 11,
+    "worldseries": 7
+  },
+  "tor_games": 180,
+  "tor_regular_games": 162,
+  "tor_postseason_games": 18,
+  "tor_total_plays": 14169,
+  "tor_regular_plays": 12664,
+  "tor_postseason_plays": 1505,
+  "tor_offense_event_rows": 7128,
+  "tor_postseason_offense_event_rows": 771,
+  "tor_batter_PA_rows_regular": 6180,
+  "tor_batter_PA_rows_postseason": 750,
+  "n_player_role_season_records": 95,
+  "re24_states": 24,
+  "run_expected_base": "MLB 2025 regular season only, excludes walk-off censored partial innings",
+  "method": "Event RE24=event runs + next-base/out run expectancy - pre-event run expectancy. Ending inning/game after RE=0.",
+  "run_expectancy_not": "Not player skill, adjusted WAR or WPA. Pitcher-context values include team defense and inherited-run risk.",
+  "conservation": {
+    "R_tor_pit": 4.847,
+    "R_tor_bat": 76.108,
+    "P_tor_pit": 9.54,
+    "P_tor_bat": 21.943
+  },
+  "notice": "The information used here was obtained free of charge from and is copyrighted by Retrosheet. Interested parties may contact Retrosheet at 20 Sunset Rd., Newark, DE 19711."
+}

@@ -1,0 +1,158 @@
+.site-nav .story-progress {
+  position: absolute;
+  inset: auto 0 -1px;
+  height: 2px;
+  background: #e29b79;
+  transform: scaleX(var(--story-progress, 0));
+  transform-origin: left;
+  pointer-events: none;
+}
+.atlas-new, .season-new { padding-top: clamp(48px, 5.5vw, 77px); }
+.scroll-feature { display: grid; grid-template-columns: minmax(0, 1fr); gap: 18px; align-items: start; }
+.scroll-notes { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; }
+.story-beat { min-width: 0; padding: 13px 13px 12px; border-top: 2px solid #c6bfb1; }
+.story-beat[data-active='true'] { background: #e9e5da; border-color: #1f5a96; }
+.beat-kicker { color: #375671; font-size: .67rem; font-weight: 760; letter-spacing: .09em; text-transform: uppercase; margin: 0 0 5px; }
+.story-beat h3 { font: 400 clamp(1.38rem, 2.35vw, 2.25rem)/1.1 var(--serif); letter-spacing: -.02em; margin: 0 0 7px; }
+.story-beat p:not(.beat-kicker) { color: #334c5d; font-size: .87rem; line-height: 1.5; margin: 2px 0 9px; }
+.beat-link { display: inline-flex; gap: 6px; align-items: center; min-height: 36px; color: #184d77; font-size: .76rem; font-weight: 740; text-decoration: underline; text-underline-offset: 3px; }
+.scroll-exhibit { min-width: 0; scroll-margin-top: 8px; }
+
+.atlas-exhibit {
+  background: #faf7f0;
+  border: 1px solid #d1cbbf;
+  border-radius: 6px;
+  padding: clamp(11px, 1.7vw, 23px);
+  box-shadow: inset 0 3px #397aa8, 0 13px 36px rgba(25,41,49,.08);
+}
+.atlas-figure { display: grid; grid-template-columns: minmax(0, 1fr); align-items: start; gap: 14px; }
+.atlas-chart-heading { margin: 0 0 9px; }
+.atlas-chart-heading h3 { margin: 0; font: 400 clamp(1.75rem, 2.65vw, 2.6rem)/1.12 var(--serif); }
+.atlas-chart-heading p { margin: 4px 0 0; color: #40596b; font-size: .78rem; line-height: 1.42; }
+.atlas-chart-heading .atlas-count { color: #35536a; font-size: .73rem; font-weight: 700; }
+.atlas-exhibit .atlas-controls { margin: 0 0 8px; }
+.atlas-exhibit .stage-btn { flex: 0 1 auto; min-height: 42px; }
+.atlas-filters, .atlas-tools { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 12px; }
+.atlas-filters { margin: 11px 0 0; padding: 8px 0 0; border-top: 1px solid #d7d1c5; }
+.atlas-filters select, .atlas-picker select { min-height: 39px; padding: 5px 20px 5px 8px; }
+.atlas-filters .field, .atlas-tools .field { font-size: .74rem; }
+.atlas-narration { display: none; font-size: .84rem; line-height: 1.45; color: #35536a; margin: 10px 0 0; }
+.atlas-exhibit .viz-card { overflow: visible; min-width: 0; }
+.atlas-exhibit .viz-svg-wrap { padding: 0; min-height: 0; overflow: visible; }
+.atlas-exhibit .viz-svg-wrap[data-view='rank'] { max-height: 337px; overflow-y: auto; scrollbar-width: thin; }
+.atlas-exhibit .viz-svg-wrap svg { width: 100%; max-width: 100%; display: block; height: auto; }
+.plot-grid { stroke: #dfdbd1; stroke-width: 1; }
+.plot-axis { stroke: #929b9d; stroke-width: 1; fill: none; }
+.plot-reference { fill: none; stroke: #697b88; stroke-width: 1.4; stroke-dasharray: 5 4; }
+.plot-tick, .plot-axis-label { fill: #496173; font: 500 11px var(--ui); }
+.plot-axis-label { fill: #274858; font-weight: 700; }
+.atlas-region-above { fill: #eaf2ea; }
+.atlas-region-below { fill: #f3eae1; }
+.atlas-region-label { fill: #245c51; font: 750 10.5px var(--ui); }
+.atlas-region-label.below { fill: #854537; }
+.atlas-gap-guide { stroke: #256ca2; stroke-width: 2; pointer-events: none; }
+.atlas-gap-origin { fill: #faf7f0; stroke: #256ca2; stroke-width: 1.4; pointer-events: none; }
+.atlas-mark { cursor: pointer; outline: none; }
+.atlas-dot { fill: #167462; stroke: #faf7f0; stroke-width: 1.1; }
+.atlas-mark.below .atlas-dot { fill: #a45344; }
+.atlas-mark.neutral .atlas-dot { fill: #6c7e87; }
+.atlas-mark.is-selected .atlas-dot, .legend-dot.blue { fill: #1f5a96; background: #1f5a96; }
+.legend-dot.neutral { background: #6c7e87; }
+.atlas-dot-ring { fill: #dce9f4; stroke: #1f5a96; stroke-width: 1.1; pointer-events: none; }
+.atlas-mark:hover .atlas-dot, .atlas-mark:focus-visible .atlas-dot { stroke: #152b3d; stroke-width: 2; }
+.atlas-plot-name { fill: #173d5b; font: 750 11px var(--ui); pointer-events: none; paint-order: stroke; stroke: #faf7f0; stroke-width: 3px; }
+.atlas-bar-name { fill: #284657; font: 600 11px var(--ui); }
+.atlas-bar-value { fill: #284657; font: 550 10px var(--mono); }
+.atlas-row-hit { fill: transparent; }
+.atlas-mark.is-selected .atlas-row-hit, .atlas-mark:hover .atlas-row-hit { fill: #e6edf4; }
+.atlas-mark:focus-visible .atlas-row-hit { fill: #edf3f6; stroke: #385979; }
+.atlas-exhibit .viz-legend { padding: 8px 0 0; gap: 6px 13px; }
+.atlas-exhibit .legend-line { flex-shrink: 0; background: none; height: 0; }
+.atlas-tools { justify-content: space-between; padding-top: 12px; margin-top: 10px; border-top: 1px solid #d7d1c5; }
+.atlas-tools .player-shortcuts button { min-height: 39px; padding: 7px 9px; }
+.atlas-picker { min-width: 0; }
+.atlas-picker select { max-width: min(42vw, 208px); }
+.profile-open { display: none; background: #e5ecf1; color: #164172; border: 1px solid #acbfd0; border-radius: 4px; min-height: 41px; padding: 7px 9px; font-size: .78rem; font-weight: 730; }
+.atlas-methods { display: grid; grid-template-columns: minmax(0,1fr); gap: 3px; color: #354f63; margin-top: 18px; }
+.atlas-methods summary { cursor: pointer; font-size: .78rem; font-weight: 720; padding: 5px 0; }
+.atlas-methods details { border-top: 1px solid #d0cabe; padding: 5px 0; }
+.atlas-methods .responsive-chart-table { max-height: 290px; }
+.atlas-methods details > p { font-size: .83rem; max-width: 71ch; margin: 3px 0 6px; }
+
+#profile-dock { margin-top: 13px; min-width: 0; border-left: 1px solid #cec9bb; padding: 0 0 0 clamp(12px, 1.6vw, 21px); }
+.profile-content { font-size: .8125rem; line-height: 1.44; }
+.profile-heading { margin-bottom: 10px; }
+.profile-heading .player-kicker { margin: 0 0 2px; font-size: .64rem; }
+.profile-heading h4 { font: 400 clamp(1.35rem, 2.15vw, 1.75rem)/1.13 var(--serif); margin: 0 0 3px; letter-spacing: -.025em; }
+.profile-source { margin: 0; font-size: .73rem; color: #48647a; }
+.profile-comparison { display: grid; grid-template-columns: 1fr 1fr minmax(0,.75fr); gap: 5px; padding: 8px 0; border-block: 1px solid #dcd5c8; margin: 0; }
+.profile-comparison dt { color: #39546a; font-size: .68rem; font-weight: 750; }
+.profile-comparison dd { margin: 2px 0 0; font-family: var(--mono); font-size: .98rem; font-weight: 700; }
+.profile-comparison [data-direction='positive'] { color: #126a54; }
+.profile-comparison [data-direction='negative'] { color: #9a4337; }
+.profile-rank { color: #425e72; font-size: .74rem; margin: 9px 0 4px; }
+.profile-stats { margin: 5px 0 9px; }
+.profile-stats > div { display: flex; justify-content: space-between; gap: 10px; padding: 4px 0; border-bottom: 1px solid #e5dfd3; }
+.profile-stats dt, .profile-stats dd { margin: 0; }
+.profile-stats dd { text-align: right; color: #173d5b; font-variant-numeric: tabular-nums; }
+.profile-content summary { cursor: pointer; font-size: .77rem; color: #174d78; font-weight: 740; min-height: 30px; }
+.profile-forecasts { width: 100%; text-align: right; border-collapse: collapse; font-variant-numeric: tabular-nums; margin-bottom: 7px; }
+.profile-forecasts tr > :first-child { text-align: left; }
+.profile-forecasts :is(td,th) { padding: 3px 4px; }
+.profile-forecasts .active { background: #e6edf1; }
+.profile-dialog { color: #162b3d; background: #faf7f0; border: 1px solid #a7b9c8; margin: auto auto 0; width: min(540px, 100%); max-width: 100%; max-height: 88vh; max-height: 88dvh; border-radius: 14px 14px 0 0; padding: 12px clamp(14px, 4vw, 25px) max(17px, env(safe-area-inset-bottom)); overflow: auto; }
+.profile-dialog::backdrop { background: rgba(12,29,46,.55); }
+.profile-close { position: sticky; top: 0; z-index: 1; display: flex; justify-content: flex-end; padding: 3px 0 7px; background: #faf7f0; }
+.profile-close button { min-height: 44px; border: 1px solid #aabccc; border-radius: 4px; background: #f0f1ee; color: #19466e; padding: 5px 10px; font-size: .78rem; font-weight: 720; cursor: pointer; }
+.profile-dialog .profile-heading h4 { font-size: 1.53rem; }
+body:has(.profile-dialog[open]) { overflow: hidden; }
+
+.season-handoff { max-width: 90ch; color: #355167; font-size: .86rem; margin: 0 0 15px; }
+.season-feature .season-card { padding: clamp(12px, 1.8vw, 23px); box-shadow: inset 0 3px #397aa8, 0 13px 36px rgba(25,41,49,.08); }
+.season-feature .season-card .evidence-caption { margin-top: 4px; }
+.season-feature .season-chart-help { margin: 8px 0 0; }
+.season-feature .season-bottom { padding: 15px 0; }
+.season-wrap > .season-findings { margin: 21px 0 0; }
+.season-reflection { max-width: 65ch; margin: 18px 0 0; font: 400 clamp(1rem, 1.6vw, 1.19rem)/1.53 var(--serif); }
+.season-pace-gap { fill: #cfe1f0; fill-opacity: .8; fill-rule: evenodd; }
+.season-forecast-line { fill: none; stroke: #886333; stroke-width: 2; stroke-dasharray: 5 4; }
+.season-wins-line { fill: none; stroke: #1d659c; stroke-width: 3.3; stroke-linejoin: round; }
+.season-wins-total, .season-forecast-total { fill: #175783; font: 800 13px var(--ui); }
+.season-forecast-total { fill: #785325; }
+.season-streak-band { fill: #efe3c6; }
+.season-streak-label { fill: #75531e; font: 760 11px var(--ui); }
+
+@media (min-width: 1051px) {
+  .scroll-feature { grid-template-columns: minmax(170px, .225fr) minmax(0, 1fr); gap: clamp(17px, 2.3vw, 35px); }
+  .scroll-notes { display: block; }
+  .story-beat { padding: 15px clamp(11px, 1.35vw, 22px); border-top: 0; border-left: 2px solid #c6bfb1; }
+  .scroll-feature[data-pinned='true'] .scroll-exhibit { position: sticky; top: 82px; }
+  .scroll-feature[data-pinned='true'] .story-beat { display: grid; align-content: center; min-height: clamp(280px, 43vh, 415px); }
+  .scroll-feature[data-pinned='true'] .story-beat:last-child { min-height: max(clamp(340px, 51vh, 490px), var(--last-step-height, 0px)); }
+  .atlas-figure { grid-template-columns: minmax(0,1fr) minmax(235px,.54fr); }
+}
+@media (max-width: 1050px) {
+  #profile-dock { display: none; }
+  .profile-open { display: inline-flex; align-items: center; }
+}
+@media (max-width: 630px) {
+  .atlas-feature .scroll-notes { display: none; }
+  .atlas-narration { display: block; }
+  .atlas-exhibit .atlas-controls { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .atlas-exhibit .stage-btn { padding: 7px 4px; font-size: .68rem; min-height: 44px; }
+  .atlas-filters .field { flex: 1 1 210px; justify-content: space-between; }
+  .atlas-filters select, .atlas-picker select, .atlas-tools .player-shortcuts button, .profile-open { min-height: 44px; }
+  .atlas-filters select { max-width: 60%; }
+  .atlas-tools { justify-content: flex-start; gap: 8px; }
+  .atlas-tools .player-shortcuts { flex-basis: 100%; }
+  .atlas-tools .player-shortcuts button { min-height: 38px; }
+  .atlas-picker { flex: 1 1 190px; justify-content: space-between; }
+  .atlas-picker select { max-width: min(57vw, 230px); }
+  .season-feature .scroll-notes { gap: 5px; }
+  .season-feature .story-beat { padding: 8px 5px 0; }
+  .season-feature .beat-kicker { font-size: .6rem; min-height: 29px; line-height: 1.35; }
+  .season-feature .story-beat h3 { font-size: 1.3rem; white-space: nowrap; margin-bottom: 2px; }
+  .season-feature .story-beat p:not(.beat-kicker) { display: none; }
+  .season-feature .beat-link { font-size: .67rem; gap: 2px; min-height: 42px; }
+  .season-feature .beat-link span { display: none; }
+}
