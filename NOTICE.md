@@ -1,6 +1,10 @@
 # Credits and attribution
 
-© 2026 Christopher Hayes. The first-person story draws on his recollections of Toronto baseball, the 2015 bat-flip game and the 2025 run with his son. The hero, stadium memory and Game 7 illustrations are adapted from the D13-07 generated concept studies and are identified as illustrations in the story.
+© 2026 Christopher Hayes. The first-person story draws on his recollections of Toronto baseball, earlier games with his daughter and son, the 2015 bat-flip game and the 2025 run with his son. The hero, stadium memory and Game 7 illustrations are adapted from the D13-07 generated concept studies and are identified as illustrations in the story.
+
+## Family photographs
+
+The four photographs in `assets/family/` are original family photographs supplied by Christopher Hayes for this story. They depict earlier ballpark visits, before the 2025 season. They are reproduced without cropping, filters or generative alterations. Photo credit: Christopher Hayes. The first-game certificate visibly records August 11, 2023, Blue Jays vs. Cubs. See the [photo register](assets/family/README.md).
 
 ## Retrosheet
 

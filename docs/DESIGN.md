@@ -1,5 +1,9 @@
 # Design approach
 
+## Family photographs
+
+Four original family photographs extend the opening and closing narrative. The Hayes 17 jersey accompanies the transition from the author’s childhood fandom to games with his daughter and son. Two full portraits sit together under “Our first games”; the selfie accompanies the closing reflection. Natural colours, restrained frames and captions below the images keep these memories distinct from the concept illustrations. Phone layouts stack the photographs without cropping. The “Before 2025” heading and captions prevent these earlier visits being mistaken for 2025 postseason photographs.
+
 ## Intention and inspiration
 
 The story begins inside the author’s memory of watching Game 7 with his son. It turns the urge to know whether the run was a fluke into a series of questions a reader can investigate. The 82-win forecast anchors the surprise. The hitters show how several players changed the shape of the lineup. The game ledger shows when the gap opened. The final inning makes the emotional stakes and the limits of the models tangible.

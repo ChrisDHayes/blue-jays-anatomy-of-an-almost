@@ -1,0 +1,70 @@
+/* Earlier family photographs: full frames, natural colour, captions outside the image. */
+.family-memories { margin-top: clamp(48px, 7vw, 88px); }
+.family-intro {
+  display: grid;
+  grid-template-columns: minmax(0, 260px) minmax(0, 1fr);
+  align-items: center;
+  gap: clamp(28px, 6vw, 80px);
+  max-width: 900px;
+  margin: 0 auto;
+  padding-top: 40px;
+  border-top: 1px solid var(--rule);
+}
+.family-copy h3 {
+  margin: 12px 0 20px;
+  font: 400 clamp(2.8rem, 5vw, 4.6rem)/1.05 var(--serif);
+  letter-spacing: -.035em;
+  color: var(--ink);
+}
+.family-copy h3 em { color: var(--blue-dark); }
+.family-copy > p:not(.eyebrow) {
+  max-width: 40ch;
+  margin-bottom: 0;
+  font: 400 clamp(1.1rem, 1.7vw, 1.3rem)/1.75 var(--serif);
+}
+.family-photo { min-width: 0; margin: 0; }
+.family-photo img {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  object-fit: contain;
+  filter: none;
+  border-radius: 3px;
+  box-shadow: 0 5px 18px #132d4317;
+}
+.family-photo figcaption {
+  margin-top: 12px;
+  color: #435c6e;
+  font: 400 .78rem/1.55 var(--ui);
+}
+.family-photo figcaption strong { display: block; color: #213f57; font-weight: 650; }
+.family-photo figcaption span { display: block; }
+.family-first-games { max-width: 780px; margin: 52px auto 0; }
+.family-first-games h4 {
+  margin: 0 0 20px;
+  font: 400 1.7rem/1.2 var(--serif);
+  color: var(--ink);
+}
+.family-photo-pair { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 28px; }
+.family-closing {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 300px);
+  align-items: center;
+  gap: clamp(28px, 6vw, 80px);
+  max-width: 980px;
+  margin-top: 44px;
+  padding-top: 36px;
+  border-top: 1px solid #527187;
+}
+.epilogue .family-closing .epilogue-close { margin: 0; border: 0; padding: 0; }
+@media (max-width: 600px) {
+  .family-intro { grid-template-columns: minmax(0, 1fr); gap: 28px; padding-top: 32px; }
+  .family-copy { grid-row: 1; }
+  .family-jersey { width: min(100%, 280px); margin: 0 auto; }
+  .family-first-games { margin-top: 38px; }
+  .family-photo-pair { grid-template-columns: minmax(0, 1fr); gap: 30px; }
+  .family-photo-pair .family-photo { width: min(100%, 360px); margin: 0 auto; }
+  .family-closing { grid-template-columns: minmax(0, 1fr); }
+  .family-closing .family-photo { width: min(100%, 360px); margin: 0 auto; }
+}

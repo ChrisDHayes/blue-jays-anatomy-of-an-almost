@@ -1,5 +1,13 @@
 # Verification
 
+## Family photographs update — November 24, 2026
+
+- Four embedded JPEGs match the supplied originals byte for byte. Each has descriptive alt text, explicit natural dimensions, and an external caption. The source and compiled page have no unresolved photo placeholders or duplicate element IDs.
+- Reviewed the Our Jays passage, paired first-game photographs and closing selfie in Chromium at a 1,348 px desktop content width and 320, 390 and 768 px frames (305, 375 and 753 px inner widths). No horizontal overflow. Portraits retain their natural proportions without clipping or colour filters; the pair stacks on phone widths.
+- All four photographs loaded when their sections were reached. Corrected the closing caption colours and verified the final desktop and phone rendering. Captions distinguish these earlier visits from 2025; the certificate caption records its printed August 11, 2023 date.
+- The standalone rebuild passes its evidence reconciliation and byte-for-byte `--check`. All embedded data blocks and executable scripts are unchanged from the preceding release.
+- Rechecked the bunt comparison in the narrow phone frame: the initial one-run rates are 61.8% and 61.4%; selecting two or more runs and trailing by one updates the rates to 18.8% and 25.0%. No site-script errors were observed.
+
 ## Story and interaction
 
 | Area | Checked |

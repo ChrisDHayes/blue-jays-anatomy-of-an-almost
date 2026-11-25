@@ -96,6 +96,14 @@ def render_story():
     ):
         binary = (ROOT / "assets" / "illustrations" / f"{image}.webp").read_bytes()
         substitutions[name] = "data:image/webp;base64," + base64.b64encode(binary).decode("ascii")
+    for name, image in (
+        ("FAMILY_JERSEY", "hayes-17"),
+        ("FAMILY_SEATS", "watching-the-game"),
+        ("FAMILY_FIRST_GAME", "first-game-certificate"),
+        ("FAMILY_TOGETHER", "together-at-the-ballpark"),
+    ):
+        binary = (ROOT / "assets" / "family" / f"{image}.jpg").read_bytes()
+        substitutions[name] = "data:image/jpeg;base64," + base64.b64encode(binary).decode("ascii")
     for key, clip in json.loads(read(DATA / "videos.json")).items():
         url = urlsplit(clip["url"])
         require(url.scheme == "https" and url.hostname, f"Invalid clip URL for {key}.")
@@ -142,7 +150,7 @@ def build():
     return "\n".join((
         read(SOURCE / "head.html").rstrip("\n"),
         "<style>",
-        *(read(styles / f"{file}.css") for file in ("base", "editorial", "scrollytelling", "replays", "outs", "methods", "bunt_comparison")),
+        *(read(styles / f"{file}.css") for file in ("base", "editorial", "scrollytelling", "replays", "outs", "methods", "bunt_comparison", "family")),
         "</style>\n</head>\n<body>",
         render_story(),
         embed_data("evidence-json", evidence),
